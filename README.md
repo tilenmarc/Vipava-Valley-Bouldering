@@ -5,7 +5,7 @@
 Boulder 1
 
 
-![alt text](https://tilenmarc.github.io/Vipava-Valley-Bouldering/Boulders/Boulder1a.jpg "Boulder1a")
+![alt text](https://tilenmarc.github.io/Vipava-Valley-Bouldering/boulders/Boulder1a.jpg "Boulder1a")
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
