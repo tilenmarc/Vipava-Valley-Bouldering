@@ -8,7 +8,7 @@
 Map
 
 
-###Boulder 1
+### Boulder 1
 
 
 <img src="boulders/Boulder1a.jpg" width="60%"/>
