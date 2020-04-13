@@ -25,13 +25,9 @@ Map
 | 1      | Doberman | 7b |  [video link](https://vimeo.com/7557363)
 | 2      | Walt Disney | 7a+ |  [video link](https://vimeo.com/102310189)
 
-img {
-  width: 50%;
-  height: auto;
-}
 
 Test2
-<img src="boulders/Boulder1a.jpg">
+<img src="boulders/Boulder1a.jpg width="50%">
 
 Test3
 ![drawing](boulders/Boulder1a.jpg){ width=50% }
