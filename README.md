@@ -27,7 +27,7 @@ Map
 
 
 Test2
-<img src="boulders/Boulder1a.jpg width="50%"/>
+<img src="boulders/Boulder1a.jpg width="50"/>
 
 Test3
 ![drawing](boulders/Boulder1a.jpg){ width=50% }
