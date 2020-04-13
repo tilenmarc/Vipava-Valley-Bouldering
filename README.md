@@ -11,14 +11,13 @@ Map
 ###Boulder 1
 
 
-
-![](boulders/Boulder1a.jpg)
+<img src="boulders/Boulder1a.jpg" width="60%"/>
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
 | 1      | Muci Fantastic | 6c |  [video link](https://vimeo.com/8040576#t=0m5s)
 
-![alt text](boulders/Boulder1b.jpg "Boulder1a")
+<img src="boulders/Boulder1b.jpg" width="50%"/>
 
 | No.        | Name           | Grade  | Video
 | --- |:-------------:| -----:|-----:
@@ -26,9 +25,3 @@ Map
 | 2      | Walt Disney | 7a+ |  [video link](https://vimeo.com/102310189)
 
 
-Test2
-<img src="boulders/Boulder1a.jpg" width="50%"/>
-                                           
-
-Test3
-![drawing](boulders/Boulder1a.jpg){ width=50% }
