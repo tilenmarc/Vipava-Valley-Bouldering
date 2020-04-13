@@ -2,6 +2,17 @@
 
 [preview](https://tilenmarc.github.io/Vipava-Valley-Bouldering/)
 
+Boulder 1
+
+
+![alt text](https://tilenmarc.github.io/Vipava-Valley-Bouldering/Boulders/Boulder1a.jpg "Boulder1a")
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 
 
 ## Welcome to GitHub Pages
