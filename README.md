@@ -11,7 +11,7 @@ Map
 ###Boulder 1
 
 
-![alt text](boulders/Boulder1a.jpg "Boulder1a")
+![](boulders/Boulder1a.jpg | width=100)
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
