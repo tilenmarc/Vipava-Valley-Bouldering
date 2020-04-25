@@ -1,7 +1,6 @@
 ---
 layout: default
-title:  "Orlovca!"
-permalink: /orlovca.html
+title:  "Orlovca"
 ---
 
 # This is a test now

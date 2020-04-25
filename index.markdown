@@ -13,4 +13,4 @@ Bla bla
 
 
 ## Orlovca
-[Orlovca](/orlovca.html)
+[Orlovca](/Vipava-Valley-Bouldering/orlovca.html)
