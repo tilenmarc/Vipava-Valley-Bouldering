@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 
@@ -11,6 +8,12 @@ Bla bla
 
 [preview](https://tilenmarc.github.io/Vipava-Valley-Bouldering/)
 
+TODO: Map
 
-## Orlovca
-[Orlovca](/Vipava-Valley-Bouldering/orlovca.html)
+| No.        | Name           | # of boulders  
+| --- |:-------------:| -----:
+| 1   | [Orlovca](/Vipava-Valley-Bouldering/orlovca.html) | ? | 
+| 2   | [Kowkberg](/Vipava-Valley-Bouldering/kowkberg.html) | ? |  
+
+
+

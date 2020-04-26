@@ -3,14 +3,9 @@ layout: default
 title:  "Orlovca"
 ---
 
-# This is a test now
-
-[preview](https://tilenmarc.github.io/Vipava-Valley-Bouldering/)
-
-
 ## Orlovca
 
-Map
+TODO Map
 
 
 ### Boulder 1
