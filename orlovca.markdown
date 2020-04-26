@@ -6,7 +6,7 @@ title:  "Orlovca"
 ## Orlovca
 
 TODO Map
-
+<iframe src="https://www.google.com/maps/d/embed?mid=1ZR4X3y2UdX_55B534zE3Yy8M855jJgKR" width="640" height="480"></iframe>
 
 ### Boulder 1
 
@@ -24,4 +24,5 @@ TODO Map
 | 1      | Doberman | 7b |  [video link](https://vimeo.com/7557363)
 | 2      | Walt Disney | 7a+ |  [video link](https://vimeo.com/102310189)
 
+TODO other
 
