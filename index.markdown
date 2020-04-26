@@ -11,7 +11,7 @@ Bla bla
 TODO: Map
 
 
-| No.        | Name           | # of boulders  
+| No.        | Name           | # of lines  
 | --- |:-------------:| -----:
 | 1   | [Orlovca](/Vipava-Valley-Bouldering/orlovca.html) | ? | 
 | 2   | [Podrta Gora](/Vipava-Valley-Bouldering/podrta_gora.html) | ? |  
