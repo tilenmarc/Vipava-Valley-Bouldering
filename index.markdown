@@ -10,6 +10,8 @@ Bla bla
 
 TODO: Map
 
+<iframe src="https://www.google.com/maps/d/embed?mid=1ELysbd_HcyENvsuK5auBFbFpwZ0" width="640" height="480"></iframe>
+
 | No.        | Name           | # of boulders  
 | --- |:-------------:| -----:
 | 1   | [Orlovca](/Vipava-Valley-Bouldering/orlovca.html) | ? | 
