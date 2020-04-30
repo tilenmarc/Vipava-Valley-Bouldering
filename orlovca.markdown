@@ -6,18 +6,18 @@ title:  "Orlovca"
 ## Orlovca
 
 TODO Map
-<iframe src="https://www.google.com/maps/d/embed?mid=1ZR4X3y2UdX_55B534zE3Yy8M855jJgKR" width="640" height="480"></iframe>
+<iframe src="https://www.google.com/maps/d/embed?mid=1ZR4X3y2UdX_55B534zE3Yy8M855jJgKR" width="90%" height="400"></iframe>
 
 ### Boulder 1
 
 
-<img src="boulders/Boulder1a.jpg" width="60%"/>
+<img src="boulders/Boulder1a.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
 | 1      | Muci Fantastic | 6c |  [video link](https://vimeo.com/8040576#t=0m5s)
 
-<img src="boulders/Boulder1b.jpg" width="50%"/>
+<img src="boulders/Boulder1b.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Video
 | --- |:-------------:| -----:|-----:
