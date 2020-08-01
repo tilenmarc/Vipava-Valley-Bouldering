@@ -37,7 +37,7 @@ TODo boulders
 | 2      | Zgornja prečka | 5+ |  
 | 3      | Spodnja prečka | 6b+ |    
 | 4      | ?? | ?? |  
-| 4      | Spodnja prečka levo | 6b+ |
+| 5      | Spodnja prečka levo | 6b+ |
 
 TODO other
 
