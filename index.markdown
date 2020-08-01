@@ -8,7 +8,7 @@ layout: default
 [preview](https://tilenmarc.github.io/Vipava-Valley-Bouldering/)
 
 ## Intro
-This is a collection of some boulders in upper Vipava valley.
+This is a collection of some boulders (or at least links) in upper Vipava valley.
 It is a work in progress so expect to be improved. The names and
 grades of the boulders are probably wrong, hence use it without
 warranty. Contributions are more than welcome, you can do it through
