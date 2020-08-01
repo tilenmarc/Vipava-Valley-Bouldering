@@ -27,6 +27,7 @@ TODO: Map
 | 3   | [Kowkberg](/Vipava-Valley-Bouldering/kowkberg.html) | ? |  
 | 4   | [Col](/Vipava-Valley-Bouldering/col.html) | ? |  
 | 5   | [Vipavska Bela](/Vipava-Valley-Bouldering/vipavska_bela.html) | ? |  
+| 6   | [Hubelj](/Vipava-Valley-Bouldering/hubelj.html) | ? |  
 
 
 
