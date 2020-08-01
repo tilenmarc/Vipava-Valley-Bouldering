@@ -15,5 +15,5 @@ TODo boulders
 <img src="boulders/hubelj4.png" width="45%"/>
 
 
-### Links:
+### Source:
 [BETA magain topo](https://issuu.com/betamag/docs/betamag)
