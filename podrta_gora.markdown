@@ -3,7 +3,7 @@ layout: default
 title:  "Podrata Gora"
 ---
 
-## Podrata Gora
+## Podrta Gora
 
 <img src="boulders/podrta_gora_map.jpg" width="90%"/>
 
