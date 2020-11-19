@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Podrata Gora"
+title:  "Podrta Gora"
 ---
 
 ## Podrta Gora
@@ -34,7 +34,7 @@ title:  "Podrata Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      | White Widow | 6c |  [video link](https://www.youtube.com/watch?v=KbvSSgW6Ygk)
+| 1      | White Widow | 7a |  [video link](https://www.youtube.com/watch?v=KbvSSgW6Ygk)
 
 
 ### Boulder 4
@@ -43,8 +43,8 @@ title:  "Podrata Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      | ??? | 6c |  soon to appear
-| 2      | ??? | project | 
+| 1      | Frfljo Drajsat | 6c |  soon to appear
+| 2      | Executive Brunch | project | 
 
 
 ### Boulder 5
@@ -75,7 +75,7 @@ title:  "Podrata Gora"
 | --- |:-------------:| -----:|-----:
 | 1      | Hrabri Mišek | 7b |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=3m44s)
 | 2      | ??? | 6c | 
-| 3      | Polentožerka | 7b |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=4m35s)
+| 3      | Polentožerka | ?? |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=4m35s)
 
 
 
