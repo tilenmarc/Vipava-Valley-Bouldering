@@ -16,7 +16,7 @@ title:  "Podrta Gora"
 | --- |:-------------:| -----:|-----:
 | 1      | Notorious B.I.G. | 8a+ |  [video link](https://vimeo.com/148803563)
 | 2     | B.I.G. | 7b+ |  [video link](https://vimeo.com/21527739)
-| 3     | ??? | 7c? |  
+| 3     | Toestaky | 7C  |  [video link](https://www.youtube.com/watch?v=qclRIGUWbGk&t=2m25s)
 
 
 ### Boulder 2
