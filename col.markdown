@@ -31,18 +31,9 @@ title:  "Col"
 | 4      | ? | 5 |  
 
 
-### Boulder 3
-
-<img src="boulders/col3.jpg" width="90%"/>
-
-| No.        | Name           | Grade  | Video |
-| --- |:-------------:| -----:|-----:
-| 1      | White Widow | 7a |  [video link](https://www.youtube.com/watch?v=KbvSSgW6Ygk)
-
-
 ### Boulder 4
 
-<img src="boulders/col3" width="90%"/>
+<img src="boulders/col3.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
@@ -51,7 +42,7 @@ title:  "Col"
 
 ### Boulder 4
 
-<img src="boulders/col4" width="90%"/>
+<img src="boulders/col4.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
