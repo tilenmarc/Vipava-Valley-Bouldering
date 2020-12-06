@@ -29,7 +29,7 @@ baseurl: "/Vipava-Valley-Bouldering" # the subpath of your site, e.g. /blog
 
 # Build settings
 #theme: texture
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
 
 plugins:
   - jekyll-feed
