@@ -33,10 +33,10 @@ theme: jekyll-theme-slate
 
 plugins:
   - jekyll-feed
-#
-#texture:
-#  title: Vipava Valley Bouldering
-#  tagline: Boulders in upper Vipava valley
+
+texture:
+  title: Vipava Valley Bouldering
+  tagline: Boulders in upper Vipava valley
 #  date_format: "%b %-d, %Y"
 #  style: black
 #  showNav: true
