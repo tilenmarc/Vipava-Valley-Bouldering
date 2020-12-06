@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-[preview](https://tilenmarc.github.io/Vipava-Valley-Bouldering/)
+[comment]: <> (This is a comment, it will not be included[preview](https://tilenmarc.github.io/Vipava-Valley-Bouldering/))
 
 ## Intro
 This is a collection of some boulders (or at least links to them) in upper Vipava valley.
