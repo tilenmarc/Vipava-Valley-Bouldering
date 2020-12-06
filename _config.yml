@@ -20,7 +20,7 @@
 
 title: Vipava Valley Bouldering
 #email: your-email@example.com
-#description: Boulders in upper Vipava Valley
+description: Boulders in upper Vipava Valley
 # this means to ignore newlines until "baseurl:"
 baseurl: "/Vipava-Valley-Bouldering" # the subpath of your site, e.g. /blog
 #url: "Vipava-Valley-Bouldering" # the base hostname & protocol for your site, e.g. http://example.com
@@ -34,9 +34,9 @@ theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
-texture:
-  title: Vipava Valley Bouldering
-  tagline: Boulders in upper Vipava valley
+#texture:
+#  title: Vipava Valley Bouldering
+#  tagline: Boulders in upper Vipava valley
 #  date_format: "%b %-d, %Y"
 #  style: black
 #  showNav: true
