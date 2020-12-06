@@ -5,8 +5,6 @@ title:  "Col"
 
 ## Col
 
-## Podrta Gora
-
 <img src="boulders/col_map-1.jpg" width="90%"/>
 
 
@@ -28,9 +26,9 @@ title:  "Col"
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
 | 1      | N.N. | 6a |  
-| 1      | Colska mafija | 7b |  [video link](https://vimeo.com/6599037)
-| 1      | ? | 6c |  
-| 1      | ? | 5 |  
+| 2      | Colska mafija | 7b |  [video link](https://vimeo.com/6599037)
+| 3      | ? | 6c |  
+| 4      | ? | 5 |  
 
 
 ### Boulder 3
