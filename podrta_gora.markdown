@@ -43,7 +43,7 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      | Frfljo Drajsat | 6c |  soon to appear
+| 1      | Frfljo Drajsat | 6b+ |  soon to appear
 | 2      | Executive Brunch | project | 
 
 
