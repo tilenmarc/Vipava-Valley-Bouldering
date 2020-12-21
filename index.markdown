@@ -14,7 +14,7 @@ send a mail to marct15 (at) google.com.
 
 
 ## Locations
-TODO: Map
+<img src="boulders/vv_boldermap.jpg" width="90%"/>
 
 
 | No.        | Name           | # of lines  
