@@ -5,8 +5,7 @@ title:  "Orlovca"
 
 ## Orlovca
 
-TODO Map
-<iframe src="https://www.google.com/maps/d/embed?mid=1ZR4X3y2UdX_55B534zE3Yy8M855jJgKR" width="90%" height="400"></iframe>
+<img src="boulders/orlovca_map.jpg" width="90%"/>
 
 ### Boulder 1
 
@@ -38,5 +37,21 @@ TODO Map
 | --- |:-------------:| -----:|-----:
 | 1      | Muci Fantastic | 6c |  [video link](https://vimeo.com/8040576#t=0m5s)
 
-TODO other
 
+### Boulder 2
+
+<img src="boulders/orlovca2.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video
+| --- |:-------------:| -----:|-----:
+| 1      | ?? | 6c+/7a |
+| 2      | ?? | 6a |
+
+### Boulder 2
+
+<img src="boulders/orlovca3.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video
+| --- |:-------------:| -----:|-----:
+| 1      | Do Benetk in nazaj | 6c+ |
+| 2      | Črvina | 7a |
