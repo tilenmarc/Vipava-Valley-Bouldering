@@ -7,8 +7,6 @@ title:  "Vipavska Bela"
 
 TODO Map
 
-TODo boulders
-
 ### Tekc crag
 
 #### Left part
