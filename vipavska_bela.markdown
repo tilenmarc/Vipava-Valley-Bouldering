@@ -13,7 +13,7 @@ TODo boulders
 
 #### Left part
 
-<img src="boulders/Tekc1.jpg" width="90%"/>
+<img src="boulders/tekc1.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
@@ -29,7 +29,7 @@ TODo boulders
 #### Right part
 
 
-<img src="boulders/Tekc2.jpg" width="90%"/>
+<img src="boulders/tekc2.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
