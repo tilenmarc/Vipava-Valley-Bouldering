@@ -5,9 +5,17 @@ title:  "Kowkberg"
 
 ## Kowkberg
 
-TODO Map
+<img src="boulders/kowk_map.jpg" width="90%"/>
 
 ### Boulder 1
+
+<img src="boulders/kowk2.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video
+| --- |:-------------:| -----:|-----:
+| 1      | Kowkberg | 7a |
+
+### Boulder 2
 
 <img src="boulders/kowk1.jpg" width="90%"/>
 
@@ -15,13 +23,7 @@ TODO Map
 | --- |:-------------:| -----:|-----:
 | 1      | ?? | 6c |
 
-### Boulder 2
 
-<img src="boulders/kowk2.jpg" width="90%"/>
-
-| No.        | Name           | Grade  | Video
-| --- |:-------------:| -----:|-----:
-| 1      | Kowkberg | 7a |
 
 ### Links:
 [Ajdbloc Digi Topo](http://ajdobloc.blogspot.com/2016/12/kowkberg-topo.html)

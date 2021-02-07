@@ -48,7 +48,7 @@ title:  "Orlovca"
 | 2      | ?? | 6a |
 | 3      | Digital Bullet | 7a+ |
 
-### Boulder 2
+### Boulder 3
 
 <img src="boulders/orlovca3.jpg" width="90%"/>
 
