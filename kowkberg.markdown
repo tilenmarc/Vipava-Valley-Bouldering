@@ -21,7 +21,7 @@ title:  "Kowkberg"
 
 | No.        | Name           | Grade  | Video
 | --- |:-------------:| -----:|-----:
-| 1      | ?? | 6c |
+| 1      | Moral Midegetry | 6c | [video link](https://www.youtube.com/watch?v=dAyonrCRAPM&t=10)
 
 
 

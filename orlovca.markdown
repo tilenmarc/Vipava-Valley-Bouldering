@@ -54,5 +54,5 @@ title:  "Orlovca"
 
 | No.        | Name           | Grade  | Video
 | --- |:-------------:| -----:|-----:
-| 1      | Do Benetk in nazaj | 6c+ |
-| 2      | Črvina | 7a |
+| 1      | Do Benetk in nazaj | 6c+ | [video link](https://vimeo.com/8040576#t=0m38s)
+| 2      | Črvina | 7a | [video link](https://vimeo.com/8040576#t=1m25s)
