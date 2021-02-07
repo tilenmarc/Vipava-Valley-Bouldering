@@ -64,7 +64,7 @@ title:  "Podrta Gora"
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
 | 1      | Flux | 7b |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=5m22s)
-| 2      | ??? | ??? |  
+| 2      | Superflux | 7c |  [video link](https://www.instagram.com/p/CH53YxzFQtg/)
 
 
 ### Boulder 7
@@ -74,7 +74,7 @@ title:  "Podrta Gora"
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
 | 1      | Hrabri Mišek | 7b |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=3m44s)
-| 2      | ??? | 6c | 
+| 2      | Poldi | 6c | 
 | 3      | Polentožerka | ?? |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=4m35s)
 
 
