@@ -18,7 +18,7 @@ title:  "Orlovca"
 | 3      | ?? | 6c |
 | 4      | ?? | 7a |
 | 5      | ?? | 6b |
-| 6      | ?? | ?  |
+| 6      | Fouch | 7a  | [video link](https://youtu.be/dnBLSXB2nsQ?t=351)
 
 
 
@@ -44,8 +44,9 @@ title:  "Orlovca"
 
 | No.        | Name           | Grade  | Video
 | --- |:-------------:| -----:|-----:
-| 1      | ?? | 6c+/7a |
+| 1      | Loaded Nonsense | 6c |
 | 2      | ?? | 6a |
+| 3      | Digital Bullet | 7a+ |
 
 ### Boulder 2
 
