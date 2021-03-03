@@ -18,6 +18,12 @@ title:  "Podrta Gora"
 | 2     | B.I.G. | 7b+ |  [video link](https://vimeo.com/21527739)
 | 3     | Toestaky | 7C  |  [video link](https://www.youtube.com/watch?v=qclRIGUWbGk&t=2m25s)
 
+<img src="boulders/podrta_gora1b.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  | 4 |  
+| 2     |  | 6b | 
 
 ### Boulder 2
 
@@ -77,8 +83,45 @@ title:  "Podrta Gora"
 | 2      | Poldi | 6c | 
 | 3      | Polentožerka | ?? |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=4m35s)
 
+### Boulder 8
 
+<img src="boulders/podrta_gora8.jpg" width="90%"/>
 
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      | Lil Wayne | 7a |
+
+### Boulder 9
+
+<img src="boulders/podrta_gora9.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      | Forest Sword  | 7b |
+
+### Boulder 10
+
+<img src="boulders/podrta_gora10.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      | G13  | ?? | [video link](https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s)
+
+### Boulder 11
+
+<img src="boulders/podrta_gora11.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      | Trainwreck  | 7c | [video link](hhttps://vimeo.com/59001324)
+
+### Boulder 12
+
+<img src="boulders/podrta_gora12.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      | Jam crack  | 6b | [video link](https://www.youtube.com/watch?v=KByYVZiAiPc&t=3m56s)
 
 
 
