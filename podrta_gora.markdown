@@ -113,7 +113,7 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      | Trainwreck  | 7c | [video link](hhttps://vimeo.com/59001324)
+| 1      | Trainwreck  | 7c | [video link](https://vimeo.com/59001324)
 
 ### Boulder 12
 
@@ -121,7 +121,7 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      | Jam crack  | 6b | [video link](https://www.youtube.com/watch?v=KByYVZiAiPc&t=3m56s)
+| 1      | Jam Crack  | 6b | [video link](https://www.youtube.com/watch?v=KByYVZiAiPc&t=3m56s)
 
 
 
