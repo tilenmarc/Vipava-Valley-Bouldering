@@ -47,6 +47,7 @@ title:  "Orlovca"
 | 1      | Loaded Nonsense | 6c |
 | 2      | ?? | 6a |
 | 3      | Digital Bullet | 7a+ |
+| 4      | ?? | 6b |
 
 ### Boulder 3
 
