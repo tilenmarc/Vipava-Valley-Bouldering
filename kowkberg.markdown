@@ -13,7 +13,7 @@ title:  "Kowkberg"
 
 | No.        | Name           | Grade  | Video
 | --- |:-------------:| -----:|-----:
-| 1      | Kowkberg | 7a |
+| 1      | Kowkberg | 7a | [video link](https://www.youtube.com/watch?v=kaiGq2T3Bhk&t=5m53s)
 
 ### Boulder 2
 
