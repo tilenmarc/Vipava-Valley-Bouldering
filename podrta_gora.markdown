@@ -123,6 +123,37 @@ title:  "Podrta Gora"
 | --- |:-------------:| -----:|-----:
 | 1      | Jam Crack  | 6b | [video link](https://www.youtube.com/watch?v=KByYVZiAiPc&t=3m56s)
 
+### Boulder 13
+
+<img src="boulders/podrta_gora13.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      | Winter's bone  | 7a | [video link](https://vimeo.com/63508162)
+| 2      | Dopethrone  | ?? | [video link](https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=1m25s)
+
+### Boulder 14
+
+<img src="boulders/podrta_gora14a.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  Dead Pony Club | ?? | [video link](https://www.instagram.com/p/CMXXkosj5l2/?utm_source=ig_web_copy_link)
+
+<img src="boulders/podrta_gora14b.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  ?? | 6b |
+
+
+### Boulder 15
+
+<img src="boulders/podrta_gora15.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  ?? | 6b | 
 
 
 ### Links:
