@@ -153,7 +153,35 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      |  ?? | 6b | 
+| 1      |  ?? | 6b |
+
+### Boulder 16
+
+<img src="boulders/podrta_gora16.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  ?? | 7b |
+
+### Boulder 17
+
+<img src="boulders/podrta_gora17a.jpg" width="90%"/>
+<img src="boulders/podrta_gora17b.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  Poka po šivih | 7c |
+| 2      |  ?? | ?? |
+| 3      |  ?? | ?? |
+
+
+### Boulder 18
+
+<img src="boulders/podrta_gora18.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Video |
+| --- |:-------------:| -----:|-----:
+| 1      |  Ex Machine | 7b |
 
 
 ### Links:
