@@ -106,7 +106,7 @@ title:  "Podrta Gora"
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
 | 1      | G13  | ?? | [video link](https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s)
-
+| 2      | ??  | ?? | [video link](https://vimeo.com/14768186#t=0m48s)
 ### Boulder 11
 
 <img src="boulders/podrta_gora11.jpg" width="90%"/>
@@ -170,9 +170,9 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      |  Poka po šivih | 7c |
-| 2      |  ?? | ?? |
-| 3      |  ?? | ?? |
+| 1      |  Poka po šivih | 7c | [video link](https://www.youtube.com/watch?v=sseQJxOmc0s)
+| 2      |  ?? | ?? | [video link](https://vimeo.com/14768186#t=4m0s)
+| 3      |  ?? | ?? | [video link](https://vimeo.com/14768186#t=1m34s)
 
 
 ### Boulder 18
@@ -181,7 +181,7 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      |  Ex Machine | 7b |
+| 1      |  Ex Machine | 7b | [video link](https://www.youtube.com/watch?v=J8tSoYaUJwo)
 
 
 ### Links:
