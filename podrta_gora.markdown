@@ -72,7 +72,7 @@ title:  "Podrta Gora"
 | --- |:-------------:| -----:|-----:
 | 1      | Flux | 7b |  [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=5m22s)
 | 2      | Superflux | 7c |  [video link](https://www.instagram.com/p/CH53YxzFQtg/)
-
+| 3      | ?? | 6b |  
 
 ### Boulder 7
 
@@ -106,7 +106,7 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Video |
 | --- |:-------------:| -----:|-----:
-| 1      | G13  | ?? | [video link](https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s)
+| 1      | G13  | 6b | [video link](https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s)
 | 2      | ??  | ?? | [video link](https://vimeo.com/14768186#t=0m48s)
 
 ### Boulder 11
