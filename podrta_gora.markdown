@@ -66,6 +66,7 @@ title:  "Podrta Gora"
 ### Boulder 6
 
 <img src="boulders/podrta_gora6.jpg" width="90%"/>
+
 <img src="boulders/podrta_gora6b.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Info  | Video |
@@ -107,7 +108,7 @@ title:  "Podrta Gora"
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | G13  | 6b | sit start | [video link](https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s)
-| 2      | ??  | ?? | sit start | [video link](https://vimeo.com/14768186#t=0m48s)
+| 2      | ??  | ?? |  | [video link](https://vimeo.com/14768186#t=0m48s)
 
 ### Boulder 11
 

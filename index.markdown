@@ -30,7 +30,9 @@ general guidelines:
 | 3   | [Kowkberg](/Vipava-Valley-Bouldering/kowkberg.html) | ? |  [location link](http://www.google.com/maps/place/45.88397702681159,13.96953529977836) |
 | 4   | [Col](/Vipava-Valley-Bouldering/col.html) | ? |  [location link](http://www.google.com/maps/place/45.887633761312124,13.998352570817945) |
 | 5   | [Vipavska Bela](/Vipava-Valley-Bouldering/vipavska_bela.html) | ? |  [location link](http://www.google.com/maps/place/45.86748555942995,13.967332303188574) |
-[comment]: <> (| 6   | [Hubelj](/Vipava-Valley-Bouldering/hubelj.html) | ? |  [location link](http://www.google.com/maps/place/45.904059993932236,13.911574939609357) |)
+
+
+[comment]: <> (| 6   | [Hubelj](/Vipava-Valley-Bouldering/hubelj.html) | ? |  [location link](http://www.google.com/maps/place/45.904059993932236,13.911574939609357) | )
 
 ## External info
 * Guide to Hubelj bouldering in BETA magazin: [link](https://issuu.com/betamag/docs/betamag)
