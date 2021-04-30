@@ -13,11 +13,11 @@ title:  "Orlovca"
 
 | No.        | Name           | Grade  | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | ?? | 4 | 
-| 2      | ?? | 6a | sit start
-| 3      | ?? | 6c | sit start
-| 4      | ?? | 7a | sit start
-| 5      | ?? | 6b |
+| 1      | ?? | 4 | |
+| 2      | ?? | 6a | sit start |
+| 3      | ?? | 6c | sit start |
+| 4      | ?? | 7a | sit start |
+| 5      | ?? | 6b | |
 | 6      | Fouch | 7a  | sit start; FA Gašper Bratina | [video link](https://youtu.be/dnBLSXB2nsQ?t=351)
 
 
@@ -45,9 +45,9 @@ title:  "Orlovca"
 | No.        | Name           | Grade  | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Loaded Nonsense | 6c | sit start |
-| 2      | ?? | 6a | Sit start |
-| 3      | Digital Bullet | 7a+ | sit start |
-| 4      | ?? | 6b | sit start; elimination: no right undercling |
+| 2      | ?? | 6a | sit start |
+| 3      | Digital Bullet | 7a+ | sit start; FA Gašper Bratina |
+| 4      | ?? | 6b | sit start; version w/o right undercling |
 
 ### Boulder 3
 

@@ -26,10 +26,9 @@ title:  "Col"
 | No.        | Name           | Grade  | Info | Video |
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | N.N. | 6a |  sit start |
-| 2      | Colska mafija | 7b |  | [video link](https://vimeo.com/6599037)
+| 2      | Colska mafija | 7b |  | [video link](https://vimeo.com/6599037#t=1m17s)
 | 3      | ? | 6c |  sit start |
-| 4      | ? | 5 |  
-
+| 4      | Leva scena | 5 |  | [video link](https://vimeo.com/6599037#t=0m53s)
 
 ### Boulder 4
 
@@ -46,7 +45,7 @@ title:  "Col"
 
 | No.        | Name           | Grade  | Info | Video |
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | Dread man | 7c+ |  | [video link](https://vimeo.com/6599037)
+| 1      | Dread man | 7c+ |  | [video link](https://vimeo.com/6599037#t=0m27s)
 | 2      | Dead man | 7c | sit start | [video link](https://www.youtube.com/watch?v=cHAw0PJKwfQ)
 
 
