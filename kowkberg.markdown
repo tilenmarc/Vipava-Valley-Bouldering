@@ -11,17 +11,17 @@ title:  "Kowkberg"
 
 <img src="boulders/kowk2.jpg" width="90%"/>
 
-| No.        | Name           | Grade  | Video
-| --- |:-------------:| -----:|-----:
-| 1      | Kowkberg | 7a | [video link](https://www.youtube.com/watch?v=kaiGq2T3Bhk&t=5m53s)
+| No.        | Name           | Grade | Info | Video
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | Kowkberg | 7a |  | [video link](https://www.youtube.com/watch?v=kaiGq2T3Bhk&t=5m53s)
 
 ### Boulder 2
 
 <img src="boulders/kowk1.jpg" width="90%"/>
 
-| No.        | Name           | Grade  | Video
-| --- |:-------------:| -----:|-----:
-| 1      | Moral Midegetry | 6c | [video link](https://www.youtube.com/watch?v=dAyonrCRAPM&t=10)
+| No.        | Name           | Grade  | Info| Video
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | Moral Midegetry | 6c | sit start | [video link](https://www.youtube.com/watch?v=dAyonrCRAPM&t=10)
 
 
 

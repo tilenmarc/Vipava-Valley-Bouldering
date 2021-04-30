@@ -12,10 +12,10 @@ title:  "Col"
 
 <img src="boulders/col1.jpg" width="90%"/>
 
-| No.        | Name           | Grade  | Video |
-| --- |:-------------:| -----:|-----:
-| 1      | ? | 5 |
-| 2     | ? | 6a | 
+| No.        | Name           | Grade | Info | Video |
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | ? | 5 | sit start |
+| 2     | ? | 6a | sit start |
 
 ### Boulder 2
 
@@ -23,20 +23,19 @@ title:  "Col"
 <img src="boulders/col2b.jpg" width="90%"/>
 
 
-| No.        | Name           | Grade  | Video |
-| --- |:-------------:| -----:|-----:
-| 1      | N.N. | 6a |  
-| 2      | Colska mafija | 7b |  [video link](https://vimeo.com/6599037)
-| 3      | ? | 6c |  
-| 4      | ? | 5 |  
-
+| No.        | Name           | Grade  | Info | Video |
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | N.N. | 6a |  sit start |
+| 2      | Colska mafija | 7b |  | [video link](https://vimeo.com/6599037#t=1m17s)
+| 3      | ? | 6c |  sit start |
+| 4      | Leva scena | 5 |  | [video link](https://vimeo.com/6599037#t=0m53s)
 
 ### Boulder 4
 
 <img src="boulders/col3.jpg" width="90%"/>
 
-| No.        | Name           | Grade  | Video |
-| --- |:-------------:| -----:|-----:
+| No.        | Name           | Grade  | Info | Video |
+| --- |:-------------:| -----:|-----:|-----:
 | 1      | ? | 5 | 
 
 
@@ -44,10 +43,10 @@ title:  "Col"
 
 <img src="boulders/col4.jpg" width="90%"/>
 
-| No.        | Name           | Grade  | Video |
-| --- |:-------------:| -----:|-----:
-| 1      | Dread man | 7c+ |  [video link](https://vimeo.com/6599037)
-| 2      | Dead man | 7c |  [video link](https://www.youtube.com/watch?v=cHAw0PJKwfQ)
+| No.        | Name           | Grade  | Info | Video |
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | Dread man | 7c+ |  | [video link](https://vimeo.com/6599037#t=0m27s)
+| 2      | Dead man | 7c | sit start | [video link](https://www.youtube.com/watch?v=cHAw0PJKwfQ)
 
 
 
