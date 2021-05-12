@@ -50,7 +50,7 @@ title:  "Podrta Gora"
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Frfljo Drajsat | 6b+ | low sit start  |  soon to appear
-| 2      | Orange Season | ?? | sit start| [video link](https://www.youtube.com/watch?v=dAyonrCRAPM&t=1m53s)
+| 2      | Orange Season | ?? | sit start; FA Gašper Bratina| [video link](https://www.youtube.com/watch?v=dAyonrCRAPM&t=1m53s)
 
 <img src="boulders/podrta_gora4b.jpg" width="90%"/>
 
@@ -77,8 +77,8 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | Flux | 7b | sit start | [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=5m22s)
-| 2      | Superflux | 7c | sit start | [video link](https://www.instagram.com/p/CH53YxzFQtg/)
+| 1      | Flux | 7b | sit start; FA Boštjan Weingerl | [video link](https://www.youtube.com/watch?v=vUYrttenb9I&t=5m22s)
+| 2      | Superflux | 7c | sit start; FA Gregor Šeliga | [video link](https://www.instagram.com/p/CH53YxzFQtg/)
 | 3      | ?? | 6b |  sit start |
 
 ### Boulder 7

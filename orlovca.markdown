@@ -67,6 +67,6 @@ title:  "Orlovca"
 | No.        | Name           | Grade  | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Slice of life | 8a | sit start | [video link](https://vimeo.com/10454293)
-| 2      | The Mechanic | 8b | sit start; FA Boštjan Weingerl | [video link1](https://vimeo.com/97145582), [video link2](https://www.youtube.com/watch?v=pj3Q7qIzgOA)
+| 2      | The Mechanic | 8b | sit start; FA Boštjan Weingerl | [video link 1](https://vimeo.com/97145582), [video link 2](https://www.youtube.com/watch?v=pj3Q7qIzgOA)
 | 3      | Fuel my fire | 7c | sit start | [video link](https://vimeo.com/37702097)
 

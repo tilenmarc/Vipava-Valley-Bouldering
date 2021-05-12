@@ -37,7 +37,6 @@ TODO Map
 | 4      | ?? | ?? |  
 | 5      | Spodnja prečka levo | 6b+ |
 
-TODO other
 
 
 ### Links:
