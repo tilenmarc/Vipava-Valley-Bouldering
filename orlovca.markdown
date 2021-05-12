@@ -57,3 +57,16 @@ title:  "Orlovca"
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Do Benetk in nazaj | 6c+ | sit start | [video link](https://vimeo.com/8040576#t=0m38s)
 | 2      | Črvina | 7a | sit start | [video link](https://vimeo.com/8040576#t=1m25s)
+
+## Yugo skala
+
+<img src="boulders/jugoskala1.jpg" width="90%"/>
+
+<img src="boulders/jugoskala2.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Info | Video
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | Slice of life | 8a | sit start | [video link](https://vimeo.com/10454293)
+| 2      | The Mechanic | 8b | sit start; FA Boštjan Weingerl | [video link1](https://vimeo.com/97145582), [video link2](https://www.youtube.com/watch?v=pj3Q7qIzgOA)
+| 3      | Fuel my fire | 7c | sit start | [video link](https://vimeo.com/37702097)
+

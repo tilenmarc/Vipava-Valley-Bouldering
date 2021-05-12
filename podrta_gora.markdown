@@ -43,7 +43,7 @@ title:  "Podrta Gora"
 | 1      | White Widow | 7a | sit start |  [video link](https://www.youtube.com/watch?v=KbvSSgW6Ygk)
 
 
-### Boulder 4
+### Boulders 4
 
 <img src="boulders/podrta_gora4.jpg" width="90%"/>
 
@@ -51,6 +51,12 @@ title:  "Podrta Gora"
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Frfljo Drajsat | 6b+ | low sit start  |  soon to appear
 | 2      | Orange Season | ?? | sit start| [video link](https://www.youtube.com/watch?v=dAyonrCRAPM&t=1m53s)
+
+<img src="boulders/podrta_gora4b.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Info  | Video |
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | ?? | 6a | sit start  | 
 
 
 ### Boulder 5
@@ -97,9 +103,12 @@ title:  "Podrta Gora"
 
 <img src="boulders/podrta_gora9.jpg" width="90%"/>
 
+<img src="boulders/podrta_gora9b.jpg" width="90%"/>
+
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Forest Sword  | 7b | sit start |
+| 2      | ?? | 6c | sit start |
 
 ### Boulder 10
 

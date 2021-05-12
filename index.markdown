@@ -25,9 +25,9 @@ general guidelines:
 
 | No.        | Name           | # of lines  | location 
 | --- |:-------------:| -----:| -----: |
-| 1   | [Orlovca](/Vipava-Valley-Bouldering/orlovca.html) | ? | [location link](http://www.google.com/maps/place/45.93408529992609,13.884733930896514) |
+| 1   | [Orlovca + Yugo skala](/Vipava-Valley-Bouldering/orlovca.html) | ? | [gps Orlovca](http://www.google.com/maps/place/45.93408529992609,13.884733930896514), [gps Yugo skala](http://www.google.com/maps/place/45.91065662865047,13.875388080578066)|
 | 2   | [Podrta Gora](/Vipava-Valley-Bouldering/podrta_gora.html) | ? |  [location link](http://www.google.com/maps/place/45.892432738378844,13.9412306977008) |
-| 3   | [Kowkberg](/Vipava-Valley-Bouldering/kowkberg.html) | ? |  [location link](http://www.google.com/maps/place/45.88397702681159,13.96953529977836) |
+| 3   | [Kovk](/Vipava-Valley-Bouldering/kovk.html) | ? |  [location link](http://www.google.com/maps/place/45.88397702681159,13.96953529977836) |
 | 4   | [Col](/Vipava-Valley-Bouldering/col.html) | ? |  [location link](http://www.google.com/maps/place/45.887633761312124,13.998352570817945) |
 | 5   | [Vipavska Bela](/Vipava-Valley-Bouldering/vipavska_bela.html) | ? |  [location link](http://www.google.com/maps/place/45.86748555942995,13.967332303188574) |
 
