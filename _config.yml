@@ -28,11 +28,25 @@ baseurl: "/Vipava-Valley-Bouldering" # the subpath of your site, e.g. /blog
 #github_username:  jekyll
 
 # Build settings
-#theme: texture
+# theme: texture
 theme: jekyll-theme-slate
+# theme: jekyll-default-theme
 
 plugins:
   - jekyll-feed
+
+
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 
 #texture:
 #  title: Vipava Valley Bouldering
@@ -50,14 +64,4 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
