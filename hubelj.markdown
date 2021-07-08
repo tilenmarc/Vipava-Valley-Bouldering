@@ -41,7 +41,7 @@ title:  "Hubelj"
 | 2      | Hokey pokey | 7a | sit start |
 | 3      | Neuromancer | 7b+ |  |
 | 4      | Nexus 10.0 | 8b+ | sit start  | [video link](hhttps://vimeo.com/48700523)
-| 5      |  Latrodectus| 7b |  |
+| 5      | Latrodectus| 7b |  |
 
 ### Boulder 3
 
