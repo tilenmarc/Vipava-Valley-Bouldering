@@ -23,6 +23,7 @@ title:  "Hubelj"
 | 6      |  |  |  |
 
 <img src="boulders/hubelj1c.jpg" width="90%"/>
+
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      |  |  |  |

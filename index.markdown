@@ -29,10 +29,8 @@ general guidelines:
 | 3   | [Kovk](/kovk.html) | 2 |  [gps link](http://www.google.com/maps/place/45.88397702681159,13.96953529977836) |
 | 4   | [Col](/col.html) | 9 |  [gps link](http://www.google.com/maps/place/45.887633761312124,13.998352570817945) |
 | 5   | [Vipavska Bela](/vipavska_bela.html) | 12 |  [gps link](http://www.google.com/maps/place/45.86748555942995,13.967332303188574) |
-
-<!---
-| 6   | [Hubelj](/Vipava-Valley-Bouldering/hubelj.html) | ? |  [location link](http://www.google.com/maps/place/45.904059993932236,13.911574939609357) | 
---->
+| 6   | [Hubelj](/Vipava-Valley-Bouldering/hubelj.html) | 35 |  [gps link](http://www.google.com/maps/place/45.904059993932236,13.911574939609357) | 
+-
 
 ## External info
 * Guide to Hubelj bouldering in BETA magazin: [link](https://issuu.com/betamag/docs/betamag)
