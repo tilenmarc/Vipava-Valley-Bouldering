@@ -24,8 +24,8 @@ title:  "Podrta Gora"
 | --- |:-------------:| -----:|-----:|-----:
 | 1      |  | 4 | sit start |
 | 2     |  | 5 | sit start |
-| 2     |  | 6a | sit start |
-| 2     |  | 6b | sit start |
+| 3     |  | 6a | sit start |
+| 4     |  | 6b | sit start |
 
 ### Boulder 2
 
@@ -198,6 +198,6 @@ title:  "Podrta Gora"
 | 1      |  Ex Machine | 7b | sit start | [video link](https://www.youtube.com/watch?v=J8tSoYaUJwo)
 
 
-### Links:
-[Ajdbloc Digi Topo](http://ajdobloc.blogspot.com/2013/10/podrta-gora-digi-map.html)
+<!-- ### Links:
+[Ajdbloc Digi Topo](http://ajdobloc.blogspot.com/2013/10/podrta-gora-digi-map.html) -->
 

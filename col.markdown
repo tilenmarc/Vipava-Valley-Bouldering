@@ -49,6 +49,6 @@ title:  "Col"
 | 2      | Dead man | 7c | sit start | [video link](https://www.youtube.com/watch?v=cHAw0PJKwfQ)
 
 
-
+<!-- 
 ### Links:
-[Gašper Bratina vimeo](https://vimeo.com/6599037)
+[Gašper Bratina vimeo](https://vimeo.com/6599037) -->

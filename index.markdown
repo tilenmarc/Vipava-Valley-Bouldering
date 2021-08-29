@@ -25,11 +25,11 @@ general guidelines:
 | No.        | Name           | # of lines currently listed  | location 
 | --- |:-------------:| -----:| -----: |
 | 1   | [Orlovca + Yugo skala](/orlovca.html) | 18 | [gps Orlovca](http://www.google.com/maps/place/45.93408529992609,13.884733930896514), [gps Yugo skala](http://www.google.com/maps/place/45.91065662865047,13.875388080578066)|
-| 2   | [Podrta Gora](/podrta_gora.html) | 35 |  [gps link](http://www.google.com/maps/place/45.892432738378844,13.9412306977008) |
+| 2   | [Podrta Gora](/podrta_gora.html) | 37 |  [gps link](http://www.google.com/maps/place/45.892432738378844,13.9412306977008) |
 | 3   | [Kovk](/kovk.html) | 2 |  [gps link](http://www.google.com/maps/place/45.88397702681159,13.96953529977836) |
 | 4   | [Col](/col.html) | 9 |  [gps link](http://www.google.com/maps/place/45.887633761312124,13.998352570817945) |
-| 5   | [Vipavska Bela](/vipavska_bela.html) | 12 |  [gps link](http://www.google.com/maps/place/45.86748555942995,13.967332303188574) |
-| 6   | [Hubelj](/hubelj.html) | 35 |  [gps link](http://www.google.com/maps/place/45.904059993932236,13.911574939609357) |
+| 5   | [Vipavska Bela](/vipavska_bela.html) | 13 |  [gps link](http://www.google.com/maps/place/45.86748555942995,13.967332303188574) |
+| 6   | [Hubelj](/hubelj.html) | 36 |  [gps link](http://www.google.com/maps/place/45.904059993932236,13.911574939609357) |
 
 
 ## External info

@@ -5,7 +5,6 @@ title:  "Vipavska Bela"
 
 ## Vipavska Bela
 
-TODO Map
 
 ### Tekc crag
 
@@ -22,7 +21,7 @@ TODO Map
 | 5      | ?? | 6c |    |
 | 6      | ?? | ? |    |
 | 7      | ?? | ? |    |
-| 8      | Cerko start | 6c |   |  Extension?
+| 8      | Cerko start | 6c | Extension?  |  
 
 
 #### Right part
@@ -40,7 +39,7 @@ TODO Map
 
 
 
-### Links:
+<!-- ### Links:
 [Ajdbloc Digi Guide](http://ajdobloc.blogspot.com/2014/07/vipavska-bela-bouldering.html)
 
-[Ajdbloc post](http://ajdobloc.blogspot.com/2014/09/vipavska-bela-blocs.html)
+[Ajdbloc post](http://ajdobloc.blogspot.com/2014/09/vipavska-bela-blocs.html) -->

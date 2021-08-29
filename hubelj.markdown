@@ -21,6 +21,8 @@ title:  "Hubelj"
 | 4      | ?? | 7b |  |
 | 5      | ?? | ?? |  |
 | 6      | Wish I was a Jedi | 6a |  |
+| 7      | ?? | 8a | arround the boulder |
+
 
 <img src="boulders/hubelj1c.jpg" width="90%"/>
 
