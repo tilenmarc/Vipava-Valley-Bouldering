@@ -22,8 +22,10 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
-| 1      |  | 4 |  |
-| 2     |  | 6b |  |
+| 1      |  | 4 | sit start |
+| 2     |  | 5 | sit start |
+| 2     |  | 6a | sit start |
+| 2     |  | 6b | sit start |
 
 ### Boulder 2
 

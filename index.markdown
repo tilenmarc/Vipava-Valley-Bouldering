@@ -7,7 +7,7 @@ layout: default
 This is a collection of some boulders (or at least links to them) in upper Vipava valley.
 It is a work in progress so expect to be improved. The names and
 grades of the boulders are probably wrong. Contributions (informations, pictures, corrections...)
-are more than welcome, you can send a mail to marct15 (at) gmail.com or post at
+are more than welcome, you can send a mail to [vvbouldering@gmail.com](mailto:vvbouldering@gmail.com) or post an issue at
 [github page](https://github.com/tilenmarc/Vipava-Valley-Bouldering/issues).
 
 
