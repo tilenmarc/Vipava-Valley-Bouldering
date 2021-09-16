@@ -51,9 +51,9 @@ title:  "Hubelj"
 
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | Srce teme  | 7b | designated start |
-| 2      | Apocalypse now | 7a | designated start |
-| 3      | Dark lord | 7b+ | designated start |
+| 1      | Srce teme  | 7b | designated start | [video link1](https://vimeo.com/22623333) [video link2](https://vimeo.com/130693421)
+| 2      | Apocalypse now | 7a | designated start | [video link1](https://vimeo.com/167560697) [video link2](https://www.youtube.com/watch?v=kPQMIB_7m0Y)
+| 3      | Dark lord | 7b+ | designated start | [video link](https://vimeo.com/12740744#t=1m27s)
 
 <img src="boulders/hubelj3b.jpg" width="90%"/>
 
@@ -61,8 +61,8 @@ title:  "Hubelj"
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Vajkl  | 7a | designated start |
 | 2      | Vajkl sit | 7b | designated start |
-| 3      | Long vajkl | 7b+ | designated start |
-| 4      | Vajkl Jackson | 7a | designated start |
+| 3      | Long vajkl | 7b+ | designated start | [video link](https://www.youtube.com/watch?v=Bl7TFPYgg3o)
+| 4      | Vajkl Jackson | 7a | designated start | [video link1](https://www.youtube.com/watch?v=Q02Xq5t_1q4) [video link2](https://vimeo.com/22309252) 
 | 5      | Long Jackson | 7b | designated start |
 
 
@@ -72,7 +72,7 @@ title:  "Hubelj"
 
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | Alko power  | 7c | sit start |
+| 1      | Alko power  | 7c | sit start | [video link](https://vimeo.com/14153810#t=3m03s)
 | 2      | Pokošena marjetica | 7a | sit start |
 
 
@@ -82,15 +82,15 @@ title:  "Hubelj"
 
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | Najc  | 6a | sit start |
-| 2      |  | 6b | sit start |
+| 1      | Najc  | 6a | sit start | [video link](https://vimeo.com/12740744#t=0m30s)
+| 2      |  | 6b | sit start | [video link](https://vimeo.com/14153810)
 
 <img src="boulders/hubelj5b.jpg" width="90%"/>
 
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Karo  | 6b | sit start |
-| 2      | Al raz | 6c+ | sit start |
+| 2      | Al raz | 6c+ | sit start | [video link](https://vimeo.com/22623333#t=0m20s)
 
 
 ### Boulder 6
@@ -99,7 +99,7 @@ title:  "Hubelj"
 
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | No man's water  | 7c | sit start |
+| 1      | No man's water  | 7c | sit start | [video link](https://vimeo.com/14153810#t=1m56s)
 | 2      | Postrv redux | 7a+ | sit start |
 | 3      | Mega pajk | 6c+ | sit start |
 | 4      | Postrv original | 7b+ | sit start |
@@ -113,8 +113,8 @@ title:  "Hubelj"
 
 | No.        | Name           | Grade  | Info| Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | History | 7c | designated start | 
-| 2      | Zero History | 8a | designated start | 
+| 1      | History | 7c | designated start | [video link](https://vimeo.com/22717415)
+| 2      | Zero History | 8a | designated start | [video link](https://vimeo.com/22143957)
 | 3      | Happy tree friend | 6b+ | sit start | 
 
 

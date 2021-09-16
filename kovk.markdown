@@ -26,7 +26,7 @@ title:  "Kowkberg"
 
 
 ### Links:
-[Ajdbloc Digi Topo](http://ajdobloc.blogspot.com/2016/12/kowkberg-topo.html)
+<!-- [Ajdbloc Digi Topo](http://ajdobloc.blogspot.com/2016/12/kowkberg-topo.html) -->
 
 [comment]: <> (<iframe src="https://www.google.com/maps/d/embed?mid=1FVIFq_cIoWB_csBVThrDzB6wbnM" width="90%" height="400"></iframe>)
 
