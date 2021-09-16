@@ -60,7 +60,7 @@ title:  "Hubelj"
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Vajkl  | 7a | designated start |
-| 2      | Vajkl sit | 7b | designated start |
+| 2      | Vajkl sit | 7b | designated start | [video link](https://www.youtube.com/watch?v=HRzn1ywlGtE)
 | 3      | Long vajkl | 7b+ | designated start | [video link](https://www.youtube.com/watch?v=Bl7TFPYgg3o)
 | 4      | Vajkl Jackson | 7a | designated start | [video link1](https://www.youtube.com/watch?v=Q02Xq5t_1q4) [video link2](https://vimeo.com/22309252) 
 | 5      | Long Jackson | 7b | designated start |
