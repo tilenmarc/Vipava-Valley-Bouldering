@@ -83,13 +83,13 @@ title:  "Hubelj"
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Najc  | 6a | sit start | [video link](https://vimeo.com/12740744#t=0m30s)
-| 2      |  | 6b | sit start | [video link](https://vimeo.com/14153810)
+| 2      |  | 6b | sit start | 
 
 <img src="boulders/hubelj5b.jpg" width="90%"/>
 
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
-| 1      | Karo  | 6b | sit start |
+| 1      | Karo  | 6b | sit start | [video link](https://vimeo.com/14153810)
 | 2      | Al raz | 6c+ | sit start | [video link](https://vimeo.com/22623333#t=0m20s)
 
 

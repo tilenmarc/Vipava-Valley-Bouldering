@@ -35,3 +35,5 @@ general guidelines:
 ## External info
 * Guide to Hubelj bouldering in BETA magazin: [link](https://issuu.com/betamag/docs/betamag)
 * Guide to Vitovlje bouldering: [link](http://img.sloclimbing.com/wp-content/uploads/2012/02/Bouldering_Vitovlje_2012.pdf), [link](http://www.krimp.si/vitovlje/#1557066366465-fa5dc4c7-8b0f)
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fvv-bouldering.si&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
