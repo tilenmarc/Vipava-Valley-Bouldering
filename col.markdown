@@ -46,7 +46,7 @@ title:  "Col"
 | No.        | Name           | Grade  | Info | Video |
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Dread man | 7c+ |  | [video link](https://vimeo.com/6599037#t=0m27s)
-| 2      | Dead man | 7c | sit start | [video link](https://www.youtube.com/watch?v=cHAw0PJKwfQ)
+| 2      | Dead man | 7c | sit start | [video link1](https://www.youtube.com/watch?v=cHAw0PJKwfQ), [video link2](https://vimeo.com/5229351), [video link3](https://www.youtube.com/watch?v=L_fkhwIigTs)
 
 
 <!-- 
