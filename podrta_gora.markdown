@@ -110,7 +110,9 @@ title:  "Podrta Gora"
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Forest Sword  | 7b | sit start |
-| 2      | ?? | 6c | sit start |
+| 2      | Oldies Goldies | 8a | sit start | https://www.youtube.com/watch?v=v0gp7BnhbC0
+| 3      | ?? | 6c | sit start |
+
 
 ### Boulder 10
 

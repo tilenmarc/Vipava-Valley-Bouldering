@@ -47,6 +47,10 @@ title:  "Col"
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Dread man | 7c+ |  | [video link](https://vimeo.com/6599037#t=0m27s)
 | 2      | Dead man | 7c | sit start | [video link1](https://www.youtube.com/watch?v=cHAw0PJKwfQ), [video link2](https://vimeo.com/5229351), [video link3](https://www.youtube.com/watch?v=L_fkhwIigTs)
+| 3      | Matador | 7a | stand start of Dead man | 
+| 4      | Matador Direct sds | 8a? | sit start; w/o a right "jug" | [video link](https://www.youtube.com/watch?v=8HR-8rQvaDg&t=1m51s)
+| 3      | Matador Direct| 7b/c | w/o a right "jug" | 
+
 
 
 <!-- 
