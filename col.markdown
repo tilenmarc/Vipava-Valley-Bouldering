@@ -20,6 +20,7 @@ title:  "Col"
 ### Boulder 2
 
 <img src="boulders/col2.jpg" width="90%"/>
+
 <img src="boulders/col2b.jpg" width="90%"/>
 
 
