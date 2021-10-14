@@ -154,7 +154,7 @@ title:  "Podrta Gora"
 
 | No.        | Name           | Grade  | Info  | Video |
 | --- |:-------------:| -----:|-----:|-----:
-| 1      |  Dead Pony Club | ??  | sit start | [video link](https://www.instagram.com/p/CMXXkosj5l2/?utm_source=ig_web_copy_link)
+| 1      |  Dead Pony Club | ??  | sit start; FA Gašper Bratina | [video link](https://www.instagram.com/p/CMXXkosj5l2/?utm_source=ig_web_copy_link)
 
 <img src="boulders/podrta_gora14b.jpg" width="90%"/>
 
