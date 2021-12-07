@@ -40,7 +40,9 @@ title:  "Orlovca"
 
 ### Boulder 2
 
-<img src="boulders/orlovca2.jpg" width="90%"/>
+<img src="boulders/orlovca2a.jpg" width="90%"/>
+
+<img src="boulders/orlovca2b.jpg" width="90%"/>
 
 | No.        | Name           | Grade  | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
@@ -48,6 +50,8 @@ title:  "Orlovca"
 | 2      | ?? | 6a | sit start |
 | 3      | Digital Bullet | 7a+ | sit start; FA Gašper Bratina |
 | 4      | ?? | 6b | sit start; version w/o right undercling |
+| 5      | Wind story | 8a | sit start; FA Boštjan Weingerl  |
+| 6      | Alone in the darkness | 7c+ | sit start; FA Boštjan Weingerl | sit start;  | [video link](https://www.youtube.com/watch?v=Y1LUUM1R0GY)
 
 ### Boulder 3
 
