@@ -62,6 +62,24 @@ title:  "Orlovca"
 | 1      | Do Benetk in nazaj | 6c+ | sit start | [video link](https://vimeo.com/8040576#t=0m38s)
 | 2      | Črvina | 7a | sit start | [video link](https://vimeo.com/8040576#t=1m25s)
 
+### Boulder 4
+
+<img src="boulders/orlovca4.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Info | Video
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | Stražni stolp | ?? | FA Gašper Bratina | [video link](https://www.youtube.com/watch?v=4IcYa7ciVKA&t=61s)
+
+### Boulder 5
+
+<img src="boulders/orlovca5.jpg" width="90%"/>
+
+| No.        | Name           | Grade  | Info | Video
+| --- |:-------------:| -----:|-----:|-----:
+| 1      | Tango on the yeyo | 7b | sit start; FA Gašper Bratina | [video link](https://www.youtube.com/watch?v=dnBLSXB2nsQ&t=43s)
+| 2      | Death grips | 6c | sit start | [video link](https://www.youtube.com/watch?v=dnBLSXB2nsQ&t=3m20s)
+
+
 ## Yugo skala
 
 <img src="boulders/jugoskala1.jpg" width="90%"/>
