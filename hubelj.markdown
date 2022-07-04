@@ -52,7 +52,7 @@ title:  "Hubelj"
 | No.        | Name           | Grade | Info | Video
 | --- |:-------------:| -----:|-----:|-----:
 | 1      | Srce teme  | 7b | designated start | [video link1](https://vimeo.com/22623333) [video link2](https://vimeo.com/130693421)
-| 2      | Apocalypse now | 7a | designated start | [video link1](https://vimeo.com/167560697) [video link2](https://www.youtube.com/watch?v=kPQMIB_7m0Y)
+| 2      | Apocalypse now | 7c | designated start | [video link1](https://vimeo.com/167560697) [video link2](https://www.youtube.com/watch?v=kPQMIB_7m0Y)
 | 3      | Dark lord | 7b+ | designated start | [video link](https://vimeo.com/12740744#t=1m27s)
 
 <img src="boulders/hubelj3b.jpg" width="90%"/>
