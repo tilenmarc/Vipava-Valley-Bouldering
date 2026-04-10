@@ -13,6 +13,7 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
+    <canvas class="pixel-canvas" id="pixel-canvas"></canvas>
     <div class="hero-content container">
       <h1>Vipava Valley Bouldering</h1>
       <p class="hero-tagline">A collection of boulders in the upper Vipava Valley, Slovenia</p>
@@ -75,23 +76,13 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
   .hero-bg {
     position: absolute;
     inset: 0;
-    background:
-      linear-gradient(135deg, var(--color-header-bg) 0%, #1a2e1c 50%, #2d3a2e 100%);
+    background: var(--color-header-bg);
     z-index: 0;
-  }
-
-  .hero-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 20% 80%, rgba(61, 107, 79, 0.3) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(212, 133, 59, 0.15) 0%, transparent 50%);
   }
 
   .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
   .hero h1 {
@@ -107,7 +98,7 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
 
   @media (min-width: 768px) {
     .hero {
-      padding: 4.5rem 0 3.5rem;
+      padding: 5rem 0 4.5rem;
     }
     .hero h1 {
       font-size: 2.75rem;
@@ -115,6 +106,16 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
     .hero-tagline {
       font-size: 1.25rem;
     }
+  }
+
+  .pixel-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    opacity: 1;
   }
 
   /* Map */
@@ -216,3 +217,355 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
     color: var(--color-text-muted);
   }
 </style>
+
+<script>
+  const canvas = document.getElementById('pixel-canvas') as HTMLCanvasElement;
+  if (canvas) {
+    const ctx = canvas.getContext('2d')!;
+    const PX = 5;
+    let W = 0, H = 0;
+    let lastW = 0, lastH = 0;
+
+    function resize() {
+      const rect = canvas.parentElement!.getBoundingClientRect();
+      W = Math.ceil(rect.width / PX);
+      H = Math.ceil(rect.height / PX);
+      canvas.width = W;
+      canvas.height = H;
+      lastW = 0; // force static re-render
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function px(x: number, y: number, c: string) {
+      ctx.fillStyle = c;
+      ctx.fillRect(Math.floor(x), Math.floor(y), 1, 1);
+    }
+
+    // === Weather state ===
+    type Weather = 'clear' | 'cloudy' | 'rain' | 'snow' | 'fog';
+    let weather: Weather = 'clear';
+    let isDay = true;
+    let cloudCount = 3;
+    let temp = 15;
+
+    // === Clouds ===
+    interface Cloud { x: number; y: number; w: number; speed: number; }
+    let clouds: Cloud[] = [
+      { x: W * 0.15, y: 3, w: 8, speed: 0.015 },
+      { x: W * 0.55, y: 5, w: 6, speed: 0.01 },
+      { x: W * 0.8, y: 2, w: 10, speed: 0.02 },
+    ];
+
+    function drawCloud(cl: Cloud, dark: boolean) {
+      const a = dark ? 0.5 : 0.3;
+      const a2 = dark ? 0.35 : 0.2;
+      const c1 = `rgba(255,255,255,${a})`;
+      const c2 = `rgba(255,255,255,${a2})`;
+      const cx = Math.floor(cl.x);
+      const cy = cl.y;
+      const hw = Math.floor(cl.w / 2);
+      for (let x = -hw; x <= hw; x++) px(cx + x, cy + 1, c2);
+      for (let x = -hw + 1; x <= hw - 1; x++) px(cx + x, cy, c1);
+      for (let x = -hw + 2; x <= hw - 2; x++) {
+        if (Math.abs(x) % 3 !== 0) px(cx + x, cy - 1, c2);
+      }
+    }
+
+    // === Precipitation ===
+    interface Drop { x: number; y: number; speed: number; drift: number; }
+    const drops: Drop[] = [];
+
+    function drawRain() {
+      for (const d of drops) {
+        d.y += d.speed;
+        d.x += d.drift;
+        if (d.y > H) { d.y = -1; d.x = Math.random() * W; }
+        px(d.x, d.y, 'rgba(150,180,220,0.5)');
+        px(d.x, d.y - 1, 'rgba(150,180,220,0.3)');
+      }
+    }
+
+    function drawSnow() {
+      for (const d of drops) {
+        d.y += d.speed;
+        d.x += d.drift + Math.sin(d.y * 0.3) * 0.05;
+        if (d.y > H) { d.y = -1; d.x = Math.random() * W; }
+        px(d.x, d.y, 'rgba(255,255,255,0.6)');
+      }
+    }
+
+    // === Fetch real weather for Vipava Valley ===
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=45.89&longitude=13.94&current=weather_code,cloud_cover,is_day,temperature_2m')
+      .then(r => r.json())
+      .then(data => {
+        const cur = data.current;
+        isDay = cur.is_day === 1;
+        temp = cur.temperature_2m;
+        const code = cur.weather_code;
+        const cloud = cur.cloud_cover;
+
+        if ((code >= 71 && code <= 77) || (code >= 85 && code <= 86)) {
+          weather = 'snow'; cloudCount = 6;
+        } else if ((code >= 51 && code <= 67) || (code >= 80 && code <= 82) || code >= 95) {
+          weather = 'rain'; cloudCount = 6;
+        } else if (code >= 45 && code <= 48) {
+          weather = 'fog'; cloudCount = 5;
+        } else if (cloud > 60 || code >= 2) {
+          weather = 'cloudy'; cloudCount = 10 + Math.floor(cloud / 15);
+        } else {
+          weather = 'clear'; cloudCount = code >= 1 ? 2 : 1;
+        }
+
+        clouds.length = 0;
+        for (let i = 0; i < cloudCount; i++) {
+          clouds.push({ x: Math.random() * W, y: 2 + Math.random() * 5, w: 6 + Math.random() * 6, speed: 0.008 + Math.random() * 0.015 });
+        }
+
+        drops.length = 0;
+        if (weather === 'rain' || weather === 'snow') {
+          const count = weather === 'rain' ? 40 : 25;
+          for (let i = 0; i < count; i++) {
+            drops.push({
+              x: Math.random() * W, y: Math.random() * H,
+              speed: weather === 'rain' ? 0.8 + Math.random() * 0.6 : 0.15 + Math.random() * 0.15,
+              drift: weather === 'snow' ? (Math.random() - 0.5) * 0.2 : (Math.random() - 0.5) * 0.05,
+            });
+          }
+        }
+
+        lastW = 0; // force static re-render
+      })
+      .catch(() => {});
+
+    // === Sun / Moon ===
+    function drawSun(sx: number, sy: number, t: number) {
+      const colors = ['#f0c040', '#f0d060', '#ffe080'];
+      for (let y = -2; y <= 2; y++) {
+        for (let x = -2; x <= 2; x++) {
+          if (x * x + y * y <= 5) px(sx + x, sy + y, colors[Math.floor(Math.random() * 2)]);
+        }
+      }
+      const rays = 8;
+      for (let i = 0; i < rays; i++) {
+        const angle = (i / rays) * Math.PI * 2 + t * 0.3;
+        const len = 3 + Math.sin(t * 2 + i);
+        px(Math.round(sx + Math.cos(angle) * len), Math.round(sy + Math.sin(angle) * len), colors[2]);
+      }
+    }
+
+    function drawMoon(mx: number, my: number) {
+      const colors = ['#c0c8d8', '#d0d8e8', '#e0e8f0'];
+      for (let y = -2; y <= 2; y++) {
+        for (let x = -2; x <= 2; x++) {
+          if (x * x + y * y <= 5) px(mx + x, my + y, colors[Math.floor(Math.random() * 3)]);
+        }
+      }
+      // Dark crescent
+      px(mx - 1, my - 1, '#1a2e1c');
+      px(mx - 1, my, '#1a2e1c');
+
+      // Stars
+      const starSeed = [0.1, 0.25, 0.4, 0.6, 0.75, 0.9];
+      for (const s of starSeed) {
+        const sx = Math.floor(s * (mx - 4));
+        const sy = 2 + Math.floor(s * 6) % 8;
+        px(sx, sy, 'rgba(255,255,255,0.4)');
+      }
+    }
+
+    // === Fog ===
+    function drawFog(t: number) {
+      for (let y = Math.floor(H * 0.3); y < H - 3; y++) {
+        const density = 0.1 + (y / H) * 0.15;
+        for (let x = 0; x < W; x++) {
+          if (Math.sin(x * 0.5 + y * 0.3 + t) > 0.3) {
+            px(x, y, `rgba(200,210,200,${density})`);
+          }
+        }
+      }
+    }
+
+    // === Static scene ===
+    let t = 0;
+    const groundY = () => H - 3;
+    let staticCanvas: OffscreenCanvas | null = null;
+
+    function renderStatic() {
+      staticCanvas = new OffscreenCanvas(W, H);
+      const sctx = staticCanvas.getContext('2d')!;
+      const gy = groundY();
+
+      function spx(x: number, y: number, c: string) {
+        sctx.fillStyle = c;
+        sctx.fillRect(Math.floor(x), Math.floor(y), 1, 1);
+      }
+
+      let seed = 42;
+      function srand() { seed = (seed * 16807 + 0) % 2147483647; return (seed - 1) / 2147483646; }
+
+      // Ground — white if snow
+      const isSnowy = weather === 'snow' && temp < 2;
+      seed = 42;
+      for (let x = 0; x < W; x++) {
+        if (isSnowy) {
+          spx(x, gy, srand() < 0.5 ? '#d8ddd8' : '#e8ede8');
+          spx(x, gy + 1, srand() < 0.5 ? '#c8cdc8' : '#d0d5d0');
+          spx(x, gy + 2, '#b8bdb8');
+          if (srand() < 0.3) spx(x, gy - 1, '#e8ede8');
+        } else {
+          spx(x, gy, srand() < 0.5 ? '#1e3e20' : '#2a4a2c');
+          spx(x, gy + 1, srand() < 0.5 ? '#1a3518' : '#223d22');
+          spx(x, gy + 2, '#152e15');
+          if (srand() < 0.3) spx(x, gy - 1, srand() < 0.5 ? '#2d5a2d' : '#3a7a3a');
+        }
+      }
+
+      function sTree(tx: number, ty: number, size: number) {
+        const trunk = Math.max(1, Math.floor(size * 0.3));
+        const canopyH = Math.floor(size * 0.7);
+        for (let y = 0; y < trunk + 1; y++) {
+          spx(tx, ty - y, srand() < 0.5 ? '#4a2a15' : '#5a3a20');
+        }
+        for (let y = 0; y < canopyH; y++) {
+          const row = y / canopyH;
+          const half = Math.floor((1 - row * 0.7) * size * 0.5) + 1;
+          for (let x = -half; x <= half; x++) {
+            const greens = ['#1a4a1a', '#2d5a2d', '#3a7a3a', '#2a6a2a'];
+            if (srand() < 0.85) spx(tx + x, ty - trunk - y, greens[Math.floor(srand() * greens.length)]);
+          }
+        }
+      }
+
+      function sBoulder(bx: number, by: number, w: number, h: number, dark: string, mid: string, light: string) {
+        for (let y = 0; y < h; y++) {
+          const row = y / h;
+          const shrink = Math.floor((1 - Math.sin(row * Math.PI)) * w * 0.35);
+          const x0 = shrink; const x1 = w - shrink;
+          for (let x = x0; x < x1; x++) {
+            const shade = (x - x0) / (x1 - x0);
+            let c = mid;
+            if (shade < 0.25 || y === 0) c = dark;
+            else if (shade > 0.6 && row > 0.2 && row < 0.6) c = light;
+            if (srand() < 0.15) c = dark;
+            spx(bx + x, by + y, c);
+          }
+        }
+      }
+
+      sTree(Math.floor(W * 0.05), gy, 5);
+      sTree(Math.floor(W * 0.12), gy, 7);
+      sTree(Math.floor(W * 0.88), gy, 5);
+      sTree(Math.floor(W * 0.95), gy, 7);
+
+      sBoulder(Math.floor(W * 0.02), gy - 8, 10, 8, '#3a5a3e', '#5a7a5e', '#7a9a7e');
+      sBoulder(Math.floor(W * 0.14), gy - 10, 13, 10, '#4a5a4e', '#6b7b6e', '#8a9a8e');
+      sBoulder(Math.floor(W * 0.82), gy - 7, 9, 7, '#4a6a4e', '#5e7e5e', '#7e9e7e');
+      sBoulder(Math.floor(W * 0.9), gy - 9, 12, 9, '#3a5a3e', '#5a7a5e', '#7a9a7e');
+
+      sTree(Math.floor(W * 0.08), gy, 8);
+      sTree(Math.floor(W * 0.2), gy, 9);
+      sTree(Math.floor(W * 0.85), gy, 8);
+      sTree(Math.floor(W * 0.93), gy, 9);
+
+      lastW = W;
+      lastH = H;
+    }
+
+    // === Animated climber ===
+    const climberCycle = 12;
+
+    function drawClimber(cx: number, cy: number, frame: number) {
+      const step = Math.floor(frame * 4) % 2;
+      px(cx, cy - 2, '#d4853b'); // head
+      px(cx, cy - 1, '#c75050'); // body
+      if (step === 0) {
+        px(cx - 1, cy - 1, '#d4853b'); // left arm
+        px(cx + 1, cy, '#d4853b');     // right arm
+        px(cx - 1, cy, '#3a5a8a');     // left leg
+        px(cx + 1, cy + 1, '#3a5a8a'); // right leg
+      } else {
+        px(cx + 1, cy - 1, '#d4853b'); // right arm
+        px(cx - 1, cy, '#d4853b');     // left arm
+        px(cx + 1, cy, '#3a5a8a');     // right leg
+        px(cx - 1, cy + 1, '#3a5a8a'); // left leg
+      }
+    }
+
+    // === Main draw loop ===
+    function draw() {
+      if (W !== lastW || H !== lastH) renderStatic();
+
+      ctx.clearRect(0, 0, W, H);
+      t += 0.016;
+
+      // Night overlay
+      if (!isDay) {
+        ctx.fillStyle = 'rgba(10,15,30,0.4)';
+        ctx.fillRect(0, 0, W, H);
+      }
+
+      // Static scene
+      if (staticCanvas) ctx.drawImage(staticCanvas, 0, 0);
+
+      // Climber
+      const gy = groundY();
+      const boulderX = Math.floor(W * 0.14);
+      const boulderTopY = gy - 10;
+      const baseY = gy - 1;
+      const phase = (t % climberCycle) / climberCycle;
+
+      let cx: number, cy: number;
+      if (phase < 0.15) {
+        const p = phase / 0.15;
+        cx = Math.floor(boulderX - 8 + p * 8);
+        cy = baseY;
+      } else if (phase < 0.45) {
+        const p = (phase - 0.15) / 0.3;
+        cx = boulderX + Math.floor(p * 7);
+        cy = Math.floor(baseY - p * (baseY - boulderTopY));
+      } else if (phase < 0.55) {
+        cx = boulderX + 7;
+        cy = boulderTopY;
+      } else if (phase < 0.85) {
+        const p = (phase - 0.55) / 0.3;
+        cx = boulderX + 7 + Math.floor(p * 4);
+        cy = Math.floor(boulderTopY + p * (baseY - boulderTopY));
+      } else {
+        const p = (phase - 0.85) / 0.15;
+        cx = boulderX + 11 - Math.floor(p * 19);
+        cy = baseY;
+      }
+      drawClimber(cx, cy, t);
+
+      // Sun or Moon
+      const showSky = weather === 'clear' || weather === 'cloudy';
+      if (showSky) {
+        if (isDay) {
+          drawSun(W - 8, 6, t);
+        } else {
+          drawMoon(W - 8, 5);
+        }
+      }
+
+      // Clouds
+      const darkClouds = weather === 'rain' || weather === 'snow';
+      for (const cl of clouds) {
+        cl.x += cl.speed;
+        if (cl.x > W + cl.w) cl.x = -cl.w;
+        drawCloud(cl, darkClouds);
+      }
+
+      // Precipitation
+      if (weather === 'rain') drawRain();
+      if (weather === 'snow') drawSnow();
+      if (weather === 'fog') drawFog(t);
+
+      requestAnimationFrame(draw);
+    }
+
+    renderStatic();
+    draw();
+
+  }
+</script>
