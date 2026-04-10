@@ -473,7 +473,10 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
     }
 
     // === Animated climber ===
-    const climberCycle = 12;
+    const climbDuration = 10; // seconds for walk+climb+top+down+walk
+    let restDuration = 5 + Math.random() * 15;
+    let climberCycle = climbDuration + restDuration;
+    let cycleStart = t;
 
     function drawClimber(cx: number, cy: number, frame: number) {
       const step = Math.floor(frame * 4) % 2;
@@ -513,30 +516,47 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
       const boulderX = Math.floor(W * 0.14);
       const boulderTopY = gy - 10;
       const baseY = gy - 1;
-      const phase = (t % climberCycle) / climberCycle;
+      const elapsed = (t - cycleStart) % climberCycle;
 
       let cx: number, cy: number;
-      if (phase < 0.15) {
-        const p = phase / 0.15;
+      if (elapsed < 1.5) {
+        // Walk toward boulder
+        const p = elapsed / 1.5;
         cx = Math.floor(boulderX - 8 + p * 8);
         cy = baseY;
-      } else if (phase < 0.45) {
-        const p = (phase - 0.15) / 0.3;
+      } else if (elapsed < 5) {
+        // Climb up
+        const p = (elapsed - 1.5) / 3.5;
         cx = boulderX + Math.floor(p * 7);
         cy = Math.floor(baseY - p * (baseY - boulderTopY));
-      } else if (phase < 0.55) {
+      } else if (elapsed < 6.5) {
+        // Stand on top
         cx = boulderX + 7;
         cy = boulderTopY;
-      } else if (phase < 0.85) {
-        const p = (phase - 0.55) / 0.3;
+      } else if (elapsed < 9) {
+        // Climb down
+        const p = (elapsed - 6.5) / 2.5;
         cx = boulderX + 7 + Math.floor(p * 4);
         cy = Math.floor(boulderTopY + p * (baseY - boulderTopY));
-      } else {
-        const p = (phase - 0.85) / 0.15;
+      } else if (elapsed < climbDuration) {
+        // Walk back
+        const p = (elapsed - 9) / 1;
         cx = boulderX + 11 - Math.floor(p * 19);
         cy = baseY;
+      } else {
+        // Resting
+        cx = Math.floor(boulderX - 8);
+        cy = baseY;
       }
-      drawClimber(cx, cy, t);
+
+      // Start new cycle with random rest
+      if (elapsed >= climberCycle - 0.02) {
+        restDuration = 5 + Math.random() * 15;
+        climberCycle = climbDuration + restDuration;
+        cycleStart = t;
+      }
+      const isResting = elapsed >= climbDuration;
+      drawClimber(cx, cy, isResting ? 0 : t);
 
       // Sun or Moon
       const showSky = weather === 'clear' || weather === 'cloudy';
