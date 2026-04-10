@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import BoulderNav from '../../components/BoulderNav.astro';
+import BoulderSection from '../../components/BoulderSection.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const areas = await getCollection('areas');
+  return areas.map((area) => ({
+    params: { slug: area.id },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+const { title, description, map_image, gps, problem_count, boulder_count, grade_range, boulders, sections } = area.data;
+
+// Collect all boulders (flat or from sections)
+const allBoulders = boulders
+  ? boulders
+  : sections
+    ? sections.flatMap((s: any) => s.boulders)
+    : [];
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="area-page container">
+    <Breadcrumbs current={title} />
+
+    <!-- Area Header -->
+    <header class="area-header">
+      <h1>{title}</h1>
+      <div class="area-stats">
+        <span>{boulder_count} {boulder_count === 1 ? 'boulder' : 'boulders'}</span>
+        <span class="sep">&middot;</span>
+        <span>{problem_count} {problem_count === 1 ? 'problem' : 'problems'}</span>
+        <span class="sep">&middot;</span>
+        <span>Grades {grade_range}</span>
+        <span class="sep">&middot;</span>
+        <a
+          href={`https://www.google.com/maps/place/${gps.lat},${gps.lng}`}
+          target="_blank"
+          rel="noopener"
+          class="gps-link"
+        >
+          GPS
+        </a>
+      </div>
+    </header>
+
+    <!-- Area Map -->
+    {map_image && (
+      <div class="area-map">
+        <img
+          src={`/images/${map_image}`}
+          alt={`Map of ${title}`}
+          loading="eager"
+          data-lightbox
+        />
+      </div>
+    )}
+
+    <!-- Toolbar: Boulder Navigation + Grade Filter -->
+    <div class="area-toolbar">
+      <BoulderNav boulders={allBoulders.map((b: any) => ({ name: b.name, id: b.id }))} />
+      <div class="grade-filter">
+        <span class="filter-label">Filter:</span>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="easy">3-5+</button>
+        <button class="filter-btn" data-filter="medium">6a-6c+</button>
+        <button class="filter-btn" data-filter="hard">7a-7c+</button>
+        <button class="filter-btn" data-filter="elite">8a-</button>
+      </div>
+    </div>
+
+    <!-- Sections or flat boulders -->
+    {sections ? (
+      sections.map((section: any) => (
+        <div class="section-group">
+          <h2 class="section-title">
+            {section.name}
+            {section.gps && (
+              <a
+                href={`https://www.google.com/maps/place/${section.gps.lat},${section.gps.lng}`}
+                target="_blank"
+                rel="noopener"
+                class="section-gps"
+              >
+                GPS
+              </a>
+            )}
+          </h2>
+          {section.boulders.map((boulder: any) => (
+            <BoulderSection boulder={boulder} />
+          ))}
+        </div>
+      ))
+    ) : boulders ? (
+      boulders.map((boulder: any) => (
+        <BoulderSection boulder={boulder} />
+      ))
+    ) : null}
+
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Back to top" id="back-to-top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+  </div>
+
+  <Lightbox />
+</BaseLayout>
+
+<style>
+  .area-page {
+    padding-bottom: 2rem;
+    overflow-x: hidden;
+  }
+
+  .area-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .area-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .area-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+  }
+
+  .sep {
+    color: var(--color-border);
+  }
+
+  .gps-link {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .gps-link:hover {
+    background: var(--color-primary-light);
+    color: #fff;
+  }
+
+  .area-map {
+    margin-bottom: 1.5rem;
+  }
+
+  .area-map img {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    cursor: zoom-in;
+  }
+
+  .section-group {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+  }
+
+  .section-gps {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.125rem 0.5rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .section-gps:hover {
+    background: var(--color-primary-light);
+    color: #fff;
+  }
+
+  /* Toolbar */
+  .area-toolbar {
+    position: sticky;
+    top: 56px;
+    z-index: 50;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .area-toolbar {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+
+  /* Grade filter */
+  .grade-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.375rem;
+    flex-shrink: 0;
+  }
+
+  .filter-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
+  .filter-btn {
+    padding: 0.3125rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--color-text);
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 50;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .back-to-top:hover {
+    background: var(--color-primary-light);
+    transform: translateY(-2px);
+  }
+</style>
+
+<script>
+  // Grade filter
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const rows = document.querySelectorAll<HTMLTableRowElement>('tr[data-grade-category]');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      rows.forEach(row => {
+        if (filter === 'all' || row.dataset.gradeCategory === filter) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      // Hide boulder sections with no visible problems
+      document.querySelectorAll<HTMLElement>('.boulder-section').forEach(section => {
+        const visibleRows = section.querySelectorAll<HTMLTableRowElement>('tr[data-grade-category]');
+        const hasVisible = Array.from(visibleRows).some(r => r.style.display !== 'none');
+        section.style.display = (filter === 'all' || hasVisible) ? '' : 'none';
+      });
+    });
+  });
+
+  // Back to top
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop?.classList.add('visible');
+    } else {
+      backToTop?.classList.remove('visible');
+    }
+  });
+
+  backToTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+</script>

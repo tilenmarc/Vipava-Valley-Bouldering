@@ -1,0 +1,302 @@
+---
+import GradeBadge from './GradeBadge.astro';
+
+interface Problem {
+  number: number;
+  name: string;
+  grade: string;
+  info?: string;
+  video?: string | string[];
+}
+
+interface Props {
+  problems: Problem[];
+}
+
+const { problems } = Astro.props;
+
+function getVideoLinks(video: string | string[] | undefined): string[] {
+  if (!video) return [];
+  if (Array.isArray(video)) return video.filter(Boolean);
+  return video ? [video] : [];
+}
+
+function getGradeCategory(grade: string): string {
+  const g = grade.toLowerCase().replace(/[+?]/g, '');
+  if (g === '??' || g === '?') return 'unknown';
+  if (/^[3-5]/.test(g) && !g.startsWith('6') && !g.startsWith('7') && !g.startsWith('8')) return 'easy';
+  if (g.startsWith('6')) return 'medium';
+  if (g.startsWith('7')) return 'hard';
+  if (g.startsWith('8')) return 'elite';
+  return 'unknown';
+}
+
+function getYouTubeThumbnail(url: string): string | null {
+  let id: string | null = null;
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes('youtube.com')) {
+      id = u.searchParams.get('v');
+    } else if (u.hostname === 'youtu.be') {
+      id = u.pathname.slice(1);
+    }
+  } catch { return null; }
+  return id ? `https://img.youtube.com/vi/${id}/mqdefault.jpg` : null;
+}
+
+function getPlatform(url: string): string {
+  if (url.includes('youtube.com') || url.includes('youtu.be')) return 'youtube';
+  if (url.includes('vimeo.com')) return 'vimeo';
+  if (url.includes('instagram.com')) return 'instagram';
+  return 'other';
+}
+---
+
+<div class="table-wrapper">
+  <table class="problem-table">
+    <thead>
+      <tr>
+        <th class="col-num">#</th>
+        <th class="col-name">Name</th>
+        <th class="col-grade">Grade</th>
+        <th class="col-info">Info</th>
+        <th class="col-video">Video</th>
+      </tr>
+    </thead>
+    <tbody>
+      {problems.map((p) => {
+        const videos = getVideoLinks(p.video);
+        return (
+          <tr data-grade-category={getGradeCategory(p.grade)}>
+            <td class="col-num" data-label="#">{p.number}</td>
+            <td class="col-name" data-label="Name">{p.name}</td>
+            <td class="col-grade" data-label="Grade">
+              <GradeBadge grade={p.grade} />
+            </td>
+            <td class="col-info" data-label="Info">{p.info || ''}</td>
+            <td class="col-video" data-label="Video">
+              {videos.length > 0 && (
+                <div class="video-links">
+                  {videos.map((url, i) => {
+                    const thumb = getYouTubeThumbnail(url);
+                    const platform = getPlatform(url);
+                    return thumb ? (
+                      <a href={url} target="_blank" rel="noopener" class="video-thumb" title={`Video ${i + 1}`}>
+                        <img src={thumb} alt={`Video of ${p.name}`} loading="lazy" />
+                        <span class="video-play">&#9654;</span>
+                      </a>
+                    ) : (
+                      <a href={url} target="_blank" rel="noopener" class={`video-badge video-${platform}`} title={`Video ${i + 1}`}>
+                        {platform === 'vimeo' ? (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.396 7.164c-.093 2.026-1.507 4.8-4.242 8.32C15.322 19.16 12.93 21 10.97 21c-1.214 0-2.24-1.12-3.08-3.36L6.21 11.2C5.6 8.96 4.944 7.84 4.24 7.84c-.16 0-.72.336-1.68 1.008L1.6 7.6c1.056-.928 2.096-1.856 3.12-2.784C5.936 3.76 6.832 3.2 7.456 3.152c1.424-.136 2.3.84 2.628 2.928.352 2.256.596 3.66.732 4.212.408 1.852.856 2.778 1.344 2.778.38 0 .952-.6 1.716-1.8.764-1.2 1.172-2.112 1.224-2.736.108-1.032-.3-1.548-1.224-1.548-.436 0-.884.1-1.344.296.892-2.924 2.6-4.344 5.12-4.264 1.868.056 2.748 1.268 2.64 3.636z"/></svg>
+                        ) : platform === 'instagram' ? (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        ) : (
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        )}
+                        <span>{platform === 'vimeo' ? 'Vimeo' : platform === 'instagram' ? 'IG' : 'Video'}</span>
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .table-wrapper {
+    overflow-x: auto;
+    max-width: 600px;
+    margin: 0.75rem auto 1.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .problem-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .problem-table thead {
+    background: var(--color-header-bg);
+    color: #fff;
+  }
+
+  .problem-table th {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .problem-table td {
+    padding: 0.625rem 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+  }
+
+  .problem-table tbody tr:hover {
+    background: rgba(61, 107, 79, 0.04);
+  }
+
+  .col-num { width: 2.5rem; text-align: center; }
+  .col-grade { width: 5rem; }
+  .col-video { width: auto; }
+  .problem-table th.col-video,
+  .problem-table td.col-video { text-align: left; width: 1%; white-space: nowrap; }
+
+  /* Video links container */
+  .video-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    align-items: center;
+  }
+
+  /* YouTube thumbnail */
+  .video-thumb {
+    position: relative;
+    display: block;
+    width: 128px;
+    height: 72px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .video-thumb:hover {
+    box-shadow: var(--shadow-md);
+    transform: scale(1.03);
+  }
+
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1.25rem;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, background 0.2s ease;
+  }
+
+  .video-thumb:hover .video-play {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  /* Platform badges (Vimeo, Instagram, other) */
+  .video-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .video-badge:hover {
+    opacity: 0.8;
+  }
+
+  .video-vimeo {
+    background: #1ab7ea;
+    color: #fff;
+  }
+
+  .video-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+  }
+
+  .video-other {
+    background: var(--color-text-muted);
+    color: #fff;
+  }
+
+  /* Mobile: card layout */
+  @media (max-width: 640px) {
+    .problem-table thead {
+      display: none;
+    }
+
+    .problem-table tbody tr {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto auto auto;
+      gap: 0.125rem 0.75rem;
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .problem-table td {
+      padding: 0;
+      border: none;
+    }
+
+    .col-num {
+      grid-row: 1;
+      grid-column: 1;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      width: auto;
+      text-align: left;
+    }
+
+    .col-name {
+      grid-row: 1;
+      grid-column: 2;
+      font-weight: 600;
+    }
+
+    .col-grade {
+      grid-row: 1;
+      grid-column: 3;
+      width: auto;
+    }
+
+    .col-info {
+      grid-row: 2;
+      grid-column: 1 / -1;
+      color: var(--color-text-muted);
+      font-size: 0.8125rem;
+    }
+
+    .col-info:empty {
+      display: none;
+    }
+
+    .col-video {
+      grid-row: 3;
+      grid-column: 1 / -1;
+      width: auto;
+      text-align: left;
+      padding-top: 0.375rem;
+    }
+
+    .col-video:empty {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import TopoImage from './TopoImage.astro';
+import ProblemTable from './ProblemTable.astro';
+
+interface Topo {
+  image: string;
+  alt?: string;
+}
+
+interface Problem {
+  number: number;
+  name: string;
+  grade: string;
+  info?: string;
+  video?: string | string[];
+}
+
+interface Props {
+  boulder: {
+    name: string;
+    id: string;
+    topos: Topo[];
+    problems: Problem[];
+  };
+}
+
+const { boulder } = Astro.props;
+---
+
+<section class="boulder-section" id={boulder.id}>
+  <div class="boulder-card">
+    <div class="boulder-header">
+      <h3>{boulder.name}</h3>
+      <span class="boulder-count">{boulder.problems.length} {boulder.problems.length === 1 ? 'problem' : 'problems'}</span>
+    </div>
+    <div class="boulder-content">
+      {boulder.topos.map((topo) => (
+        <TopoImage src={topo.image} alt={topo.alt || boulder.name} />
+      ))}
+      <ProblemTable problems={boulder.problems} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .boulder-section {
+    margin-bottom: 1rem;
+  }
+
+  .boulder-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .boulder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+  }
+
+  .boulder-header h3 {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+
+  .boulder-count {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    margin-left: 0.75rem;
+  }
+
+  .boulder-content {
+    padding: 0 1.25rem 1.25rem;
+  }
+</style>

@@ -1,0 +1,151 @@
+---
+interface Props {
+  area: {
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      thumbnail: string;
+      problem_count: number;
+      boulder_count: number;
+      grade_range: string;
+      gps: { lat: number; lng: number };
+    };
+  };
+}
+
+const { area } = Astro.props;
+const { title, thumbnail, problem_count, boulder_count, grade_range, gps } = area.data;
+---
+
+<div class="area-card">
+  <a href={`/areas/${area.id}/`} class="card-link">
+    <div class="card-image">
+      <img src={`/images/${thumbnail}`} alt={title} loading="lazy" />
+    </div>
+    <div class="card-body">
+      <h3>{title}</h3>
+      <div class="card-stats">
+        <span>{boulder_count} {boulder_count === 1 ? 'boulder' : 'boulders'}</span>
+        <span class="sep">&middot;</span>
+        <span>{problem_count} {problem_count === 1 ? 'problem' : 'problems'}</span>
+        <span class="sep">&middot;</span>
+        <span>Grades {grade_range}</span>
+      </div>
+    </div>
+  </a>
+  <a
+    href={`https://www.google.com/maps/place/${gps.lat},${gps.lng}`}
+    class="gps-link"
+    target="_blank"
+    rel="noopener"
+    title="Open in Google Maps"
+  >
+    GPS
+  </a>
+</div>
+
+<style>
+  .area-card {
+    display: flex;
+    align-items: center;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    padding-right: 1.25rem;
+  }
+
+  .area-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .card-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.75rem 0 0.75rem 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .card-link:hover {
+    color: inherit;
+  }
+
+  .card-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-body h3 {
+    font-size: 1.0625rem;
+    margin: 0 0 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-stats {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .sep {
+    color: var(--color-border);
+  }
+
+  .gps-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: var(--radius);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .gps-link:hover {
+    background: var(--color-primary-light);
+    color: #fff;
+  }
+
+  @media (min-width: 640px) {
+    .card-image {
+      width: 120px;
+      height: 120px;
+    }
+
+    .card-body h3 {
+      font-size: 1.125rem;
+    }
+  }
+</style>

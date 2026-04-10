@@ -1,0 +1,59 @@
+---
+interface Props {
+  grade: string;
+}
+
+const { grade } = Astro.props;
+
+function getGradeClass(grade: string): string {
+  const g = grade.toLowerCase().replace(/[+?]/g, '');
+  if (g === '??' || g === '?') return 'unknown';
+  // Numeric grades (3, 4, 5) or grades starting with 5
+  if (/^[3-5]/.test(g) && !g.startsWith('6') && !g.startsWith('7') && !g.startsWith('8')) return 'easy';
+  if (g.startsWith('6')) return 'medium';
+  if (g.startsWith('7')) return 'hard';
+  if (g.startsWith('8')) return 'elite';
+  return 'unknown';
+}
+
+const gradeClass = getGradeClass(grade);
+---
+
+<span class={`grade-badge grade-${gradeClass}`}>{grade}</span>
+
+<style>
+  .grade-badge {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .grade-easy {
+    background: color-mix(in srgb, var(--grade-easy) 15%, transparent);
+    color: #2e7d32;
+  }
+
+  .grade-medium {
+    background: color-mix(in srgb, var(--grade-medium) 15%, transparent);
+    color: #1565c0;
+  }
+
+  .grade-hard {
+    background: color-mix(in srgb, var(--grade-hard) 15%, transparent);
+    color: #e65100;
+  }
+
+  .grade-elite {
+    background: color-mix(in srgb, var(--grade-elite) 15%, transparent);
+    color: #c62828;
+  }
+
+  .grade-unknown {
+    background: color-mix(in srgb, #9e9e9e 15%, transparent);
+    color: #616161;
+  }
+</style>

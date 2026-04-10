@@ -1,0 +1,44 @@
+---
+interface Props {
+  current: string;
+}
+
+const { current } = Astro.props;
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">{current}</li>
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs {
+    padding: 0.75rem 0;
+  }
+
+  ol {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  li + li::before {
+    content: '/';
+    margin-right: 0.5rem;
+    color: var(--color-border);
+  }
+
+  li a {
+    color: var(--color-primary);
+  }
+
+  li[aria-current="page"] {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+</style>

@@ -1,0 +1,40 @@
+{
+  "title": "Vipavska Bela",
+  "description": "Tekc crag with 13 problems across left and right sections",
+  "map_image": "",
+  "gps": { "lat": 45.86748555942995, "lng": 13.967332303188574 },
+  "problem_count": 13,
+  "boulder_count": 1,
+  "grade_range": "5 - 7a",
+  "thumbnail": "tekc1.jpg",
+  "order": 5,
+  "boulders": [
+    {
+      "name": "Tekc crag — Left",
+      "id": "tekc-left",
+      "topos": [{ "image": "tekc1.jpg", "alt": "Tekc crag left section" }],
+      "problems": [
+        { "number": 1, "name": "Precka desno", "grade": "5", "info": "", "video": "" },
+        { "number": 2, "name": "Precka levo", "grade": "5", "info": "", "video": "" },
+        { "number": 3, "name": "Otrok start", "grade": "5+", "info": "", "video": "" },
+        { "number": 4, "name": "??", "grade": "7a", "info": "", "video": "" },
+        { "number": 5, "name": "??", "grade": "6c", "info": "", "video": "" },
+        { "number": 6, "name": "??", "grade": "?", "info": "", "video": "" },
+        { "number": 7, "name": "??", "grade": "?", "info": "", "video": "" },
+        { "number": 8, "name": "Cerko start", "grade": "6c", "info": "Extension?", "video": "" }
+      ]
+    },
+    {
+      "name": "Tekc crag — Right",
+      "id": "tekc-right",
+      "topos": [{ "image": "tekc2.jpg", "alt": "Tekc crag right section" }],
+      "problems": [
+        { "number": 1, "name": "Hci start", "grade": "7a", "info": "", "video": "" },
+        { "number": 2, "name": "Zgornja precka", "grade": "5+", "info": "", "video": "" },
+        { "number": 3, "name": "Spodnja precka", "grade": "6b+", "info": "", "video": "" },
+        { "number": 4, "name": "??", "grade": "??", "info": "", "video": "" },
+        { "number": 5, "name": "Spodnja precka levo", "grade": "6b+", "info": "", "video": "" }
+      ]
+    }
+  ]
+}

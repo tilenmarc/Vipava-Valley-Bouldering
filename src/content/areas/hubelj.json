@@ -1,0 +1,110 @@
+{
+  "title": "Hubelj",
+  "description": "7 boulders with 36 problems along the Hubelj river",
+  "map_image": "hubelj_map.jpg",
+  "gps": { "lat": 45.904059993932236, "lng": 13.911574939609357 },
+  "problem_count": 36,
+  "boulder_count": 7,
+  "grade_range": "5 - 8b+",
+  "thumbnail": "hubelj3a.jpg",
+  "order": 6,
+  "boulders": [
+    {
+      "name": "Boulder 1",
+      "id": "boulder-1",
+      "topos": [
+        { "image": "hubelj1a.jpg", "alt": "Boulder 1 front" },
+        { "image": "hubelj1b.jpg", "alt": "Boulder 1 side" },
+        { "image": "hubelj1c.jpg", "alt": "Boulder 1 back" }
+      ],
+      "problems": [
+        { "number": 1, "name": "??", "grade": "6b", "info": "", "video": "" },
+        { "number": 2, "name": "??", "grade": "6b", "info": "", "video": "" },
+        { "number": 3, "name": "??", "grade": "6c", "info": "", "video": "" },
+        { "number": 4, "name": "??", "grade": "7b", "info": "", "video": "" },
+        { "number": 5, "name": "??", "grade": "??", "info": "", "video": "" },
+        { "number": 6, "name": "Wish I was a Jedi", "grade": "6a", "info": "", "video": "" },
+        { "number": 7, "name": "??", "grade": "8a", "info": "around the boulder", "video": "" },
+        { "number": 8, "name": "??", "grade": "5", "info": "", "video": "" },
+        { "number": 9, "name": "??", "grade": "6c+", "info": "", "video": "" },
+        { "number": 10, "name": "??", "grade": "5+", "info": "", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 2",
+      "id": "boulder-2",
+      "topos": [{ "image": "hubelj2.jpg", "alt": "Boulder 2 topo" }],
+      "problems": [
+        { "number": 1, "name": "Mantis", "grade": "7a", "info": "", "video": "" },
+        { "number": 2, "name": "Hokey pokey", "grade": "7a", "info": "sit start", "video": "" },
+        { "number": 3, "name": "Neuromancer", "grade": "7b+", "info": "", "video": "" },
+        { "number": 4, "name": "Nexus 10.0", "grade": "8b+", "info": "sit start", "video": "https://vimeo.com/48700523" },
+        { "number": 5, "name": "Latrodectus", "grade": "7b", "info": "", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 3",
+      "id": "boulder-3",
+      "topos": [
+        { "image": "hubelj3a.jpg", "alt": "Boulder 3 front" },
+        { "image": "hubelj3b.jpg", "alt": "Boulder 3 side" }
+      ],
+      "problems": [
+        { "number": 1, "name": "Srce teme", "grade": "7b", "info": "designated start", "video": ["https://vimeo.com/22623333", "https://vimeo.com/130693421"] },
+        { "number": 2, "name": "Apocalypse now", "grade": "7c", "info": "designated start", "video": ["https://vimeo.com/167560697", "https://www.youtube.com/watch?v=kPQMIB_7m0Y"] },
+        { "number": 3, "name": "Dark lord", "grade": "7b+", "info": "designated start", "video": "https://vimeo.com/12740744#t=1m27s" },
+        { "number": 4, "name": "Vajkl", "grade": "7a", "info": "designated start", "video": "" },
+        { "number": 5, "name": "Vajkl sit", "grade": "7b", "info": "designated start", "video": "https://www.youtube.com/watch?v=HRzn1ywlGtE" },
+        { "number": 6, "name": "Long vajkl", "grade": "7b+", "info": "designated start", "video": "https://www.youtube.com/watch?v=Bl7TFPYgg3o" },
+        { "number": 7, "name": "Vajkl Jackson", "grade": "7a", "info": "designated start", "video": ["https://www.youtube.com/watch?v=Q02Xq5t_1q4", "https://vimeo.com/22309252"] },
+        { "number": 8, "name": "Long Jackson", "grade": "7b", "info": "designated start", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 4",
+      "id": "boulder-4",
+      "topos": [{ "image": "hubelj4.jpg", "alt": "Boulder 4 topo" }],
+      "problems": [
+        { "number": 1, "name": "Alko power", "grade": "7c", "info": "sit start", "video": "https://vimeo.com/14153810#t=3m03s" },
+        { "number": 2, "name": "Pokosena marjetica", "grade": "7a", "info": "sit start", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 5",
+      "id": "boulder-5",
+      "topos": [
+        { "image": "hubelj5a.jpg", "alt": "Boulder 5 front" },
+        { "image": "hubelj5b.jpg", "alt": "Boulder 5 side" }
+      ],
+      "problems": [
+        { "number": 1, "name": "Najc", "grade": "6a", "info": "sit start", "video": "https://vimeo.com/12740744#t=0m30s" },
+        { "number": 2, "name": "??", "grade": "6b", "info": "sit start", "video": "" },
+        { "number": 3, "name": "Karo", "grade": "6b", "info": "sit start", "video": "https://vimeo.com/14153810" },
+        { "number": 4, "name": "Al raz", "grade": "6c+", "info": "sit start", "video": "https://vimeo.com/22623333#t=0m20s" }
+      ]
+    },
+    {
+      "name": "Boulder 6",
+      "id": "boulder-6",
+      "topos": [{ "image": "hubelj6.jpg", "alt": "Boulder 6 topo" }],
+      "problems": [
+        { "number": 1, "name": "No man's water", "grade": "7c", "info": "sit start", "video": "https://vimeo.com/14153810#t=1m56s" },
+        { "number": 2, "name": "Postrv redux", "grade": "7a+", "info": "sit start", "video": "" },
+        { "number": 3, "name": "Mega pajk", "grade": "6c+", "info": "sit start", "video": "" },
+        { "number": 4, "name": "Postrv original", "grade": "7b+", "info": "sit start", "video": "" },
+        { "number": 5, "name": "Poka", "grade": "6a", "info": "sit start", "video": "" },
+        { "number": 6, "name": "Sarenka", "grade": "6c", "info": "sit start", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 7",
+      "id": "boulder-7",
+      "topos": [{ "image": "hubelj7.jpg", "alt": "Boulder 7 topo" }],
+      "problems": [
+        { "number": 1, "name": "History", "grade": "7c", "info": "designated start", "video": "https://vimeo.com/22717415" },
+        { "number": 2, "name": "Zero History", "grade": "8a", "info": "designated start", "video": "https://vimeo.com/22143957" },
+        { "number": 3, "name": "Happy tree friend", "grade": "6b+", "info": "sit start", "video": "" }
+      ]
+    }
+  ]
+}

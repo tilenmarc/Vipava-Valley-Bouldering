@@ -1,0 +1,71 @@
+{
+  "title": "Col",
+  "description": "5 boulders with 17 problems near Col village",
+  "map_image": "col_map.jpg",
+  "gps": { "lat": 45.887633761312124, "lng": 13.998352570817945 },
+  "problem_count": 17,
+  "boulder_count": 5,
+  "grade_range": "5 - 8a",
+  "thumbnail": "col4.jpg",
+  "order": 4,
+  "boulders": [
+    {
+      "name": "Boulder 1",
+      "id": "boulder-1",
+      "topos": [{ "image": "col1.jpg", "alt": "Boulder 1 topo" }],
+      "problems": [
+        { "number": 1, "name": "?", "grade": "5", "info": "sit start", "video": "" },
+        { "number": 2, "name": "?", "grade": "6a", "info": "sit start", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 2",
+      "id": "boulder-2",
+      "topos": [
+        { "image": "col2.jpg", "alt": "Boulder 2 front" },
+        { "image": "col2b.jpg", "alt": "Boulder 2 side" }
+      ],
+      "problems": [
+        { "number": 1, "name": "N.N.", "grade": "6a", "info": "sit start", "video": "" },
+        { "number": 2, "name": "Colska mafija", "grade": "7b", "info": "reverse same grade", "video": "https://vimeo.com/6599037#t=1m17s" },
+        { "number": 3, "name": "?", "grade": "6c", "info": "sit start", "video": "" },
+        { "number": 4, "name": "Leva scena", "grade": "5", "info": "", "video": "https://vimeo.com/6599037#t=0m53s" }
+      ]
+    },
+    {
+      "name": "Boulder 3",
+      "id": "boulder-3",
+      "topos": [{ "image": "col3.jpg", "alt": "Boulder 3 topo" }],
+      "problems": [
+        { "number": 1, "name": "?", "grade": "5", "info": "", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 4",
+      "id": "boulder-4",
+      "topos": [{ "image": "col4.jpg", "alt": "Boulder 4 topo" }],
+      "problems": [
+        { "number": 1, "name": "Dread man", "grade": "7c+", "info": "", "video": "https://vimeo.com/6599037#t=0m27s" },
+        { "number": 2, "name": "Dead man", "grade": "7c", "info": "sit start", "video": ["https://www.youtube.com/watch?v=cHAw0PJKwfQ", "https://vimeo.com/5229351", "https://www.youtube.com/watch?v=L_fkhwIigTs"] },
+        { "number": 3, "name": "Matador", "grade": "7a", "info": "stand start of Dead man", "video": "" },
+        { "number": 4, "name": "Matador Direct sds", "grade": "8a?", "info": "sit start; w/o a right \"jug\"", "video": "https://www.youtube.com/watch?v=8HR-8rQvaDg&t=1m51s" },
+        { "number": 5, "name": "Matador Direct", "grade": "7b/c", "info": "w/o a right \"jug\"", "video": "" }
+      ]
+    },
+    {
+      "name": "Boulder 5: Wu Bloc",
+      "id": "wu-bloc",
+      "topos": [
+        { "image": "col_wu_a.jpg", "alt": "Wu Bloc front" },
+        { "image": "col_wu_b.jpg", "alt": "Wu Bloc side" }
+      ],
+      "problems": [
+        { "number": 1, "name": "Wu", "grade": "6c", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=miU7jLs3mQY&t=1m37s" },
+        { "number": 2, "name": "Tony Starks", "grade": "6b", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=miU7jLs3mQY&t=58s" },
+        { "number": 3, "name": "Protect ya neck", "grade": "7a", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=miU7jLs3mQY&t=6s" },
+        { "number": 4, "name": "Inspectah deck", "grade": "7b", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=miU7jLs3mQY&t=3m04s" },
+        { "number": 5, "name": "Rza", "grade": "7a", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=5juL1d0aDTk&t=4m04s" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="topo-wrapper">
+  <img
+    src={`/images/${src}`}
+    alt={alt}
+    loading="lazy"
+    decoding="async"
+    class="topo-image"
+    data-lightbox
+  />
+</div>
+
+<style>
+  .topo-wrapper {
+    margin: 0.75rem 0;
+  }
+
+  .topo-image {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    cursor: zoom-in;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .topo-image:hover {
+    box-shadow: var(--shadow-md);
+  }
+</style>

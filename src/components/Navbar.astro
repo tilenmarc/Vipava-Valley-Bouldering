@@ -1,0 +1,173 @@
+---
+import { getCollection } from 'astro:content';
+
+const areas = await getCollection('areas');
+const sortedAreas = areas.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="navbar">
+  <div class="navbar-inner container">
+    <a href="/" class="navbar-brand">VV Bouldering</a>
+    <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <ul class="navbar-links">
+      {sortedAreas.map((area) => {
+        const href = `/areas/${area.id}/`;
+        const isActive = currentPath === href;
+        return (
+          <li>
+            <a href={href} class={isActive ? 'active' : ''}>{area.data.title}</a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-header-bg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    gap: 1rem;
+  }
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    white-space: nowrap;
+  }
+
+  .navbar-brand:hover {
+    color: var(--color-accent-light);
+  }
+
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .hamburger {
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before { top: -6px; }
+  .hamburger::after { top: 6px; }
+
+  /* Open state */
+  .navbar-toggle[aria-expanded="true"] .hamburger {
+    background: transparent;
+  }
+  .navbar-toggle[aria-expanded="true"] .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .navbar-toggle[aria-expanded="true"] .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .navbar-links {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--color-header-bg);
+    padding: 0.5rem 0 1rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .navbar-links.open {
+    display: block;
+  }
+
+  .navbar-links li a {
+    display: block;
+    padding: 0.625rem 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9375rem;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .navbar-links li a:hover,
+  .navbar-links li a.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-links li a.active {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-toggle {
+      display: none;
+    }
+
+    .navbar-links {
+      display: flex;
+      position: static;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      gap: 0.25rem;
+    }
+
+    .navbar-links li a {
+      padding: 0.375rem 0.625rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.navbar-toggle');
+  const links = document.querySelector('.navbar-links');
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    links?.classList.toggle('open');
+  });
+</script>

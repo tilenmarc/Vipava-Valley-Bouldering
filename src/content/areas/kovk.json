@@ -1,0 +1,29 @@
+{
+  "title": "Kovk",
+  "description": "2 boulders with 2 problems at Kowkberg",
+  "map_image": "kowk_map.jpg",
+  "gps": { "lat": 45.88397702681159, "lng": 13.96953529977836 },
+  "problem_count": 2,
+  "boulder_count": 2,
+  "grade_range": "6c - 7a",
+  "thumbnail": "kowk2.jpg",
+  "order": 99,
+  "boulders": [
+    {
+      "name": "Boulder 1",
+      "id": "boulder-1",
+      "topos": [{ "image": "kowk2.jpg", "alt": "Boulder 1 topo" }],
+      "problems": [
+        { "number": 1, "name": "Kowkberg", "grade": "7a", "info": "", "video": "https://www.youtube.com/watch?v=kaiGq2T3Bhk&t=5m53s" }
+      ]
+    },
+    {
+      "name": "Boulder 2",
+      "id": "boulder-2",
+      "topos": [{ "image": "kowk1.jpg", "alt": "Boulder 2 topo" }],
+      "problems": [
+        { "number": 1, "name": "Moral Midegetry", "grade": "6c", "info": "sit start", "video": "https://www.youtube.com/watch?v=dAyonrCRAPM&t=10" }
+      ]
+    }
+  ]
+}

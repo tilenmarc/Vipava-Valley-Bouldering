@@ -1,0 +1,14 @@
+{
+  "name": "vipava-valley-bouldering",
+  "version": "2.0.0",
+  "description": "Bouldering guidebook for the upper Vipava Valley",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.1.5"
+  }
+}
