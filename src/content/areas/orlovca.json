@@ -3,8 +3,8 @@
   "description": "5 boulders with 18 problems at Orlovca",
   "map_image": "orlovca_map.jpg",
   "gps": { "lat": 45.93408529992609, "lng": 13.884733930896514 },
-  "problem_count": 18,
-  "boulder_count": 5,
+  "problem_count": 21,
+  "boulder_count": 6,
   "grade_range": "4 - 8a",
   "thumbnail": "orlovca2a.jpg",
   "order": 1,
@@ -39,10 +39,10 @@
       "problems": [
         { "number": 1, "name": "Loaded Nonsense", "grade": "6c", "info": "sit start", "video": "" },
         { "number": 2, "name": "??", "grade": "6a", "info": "sit start", "video": "" },
-        { "number": 3, "name": "Digital Bullet", "grade": "7a+", "info": "sit start; FA Gasper Bratina", "video": "" },
-        { "number": 4, "name": "??", "grade": "6b", "info": "sit start; version w/o right undercling", "video": "" },
-        { "number": 5, "name": "Wind story", "grade": "8a", "info": "sit start; FA Bostjan Weingerl", "video": "" },
-        { "number": 6, "name": "Alone in the darkness", "grade": "7c+", "info": "sit start; FA Bostjan Weingerl", "video": "https://www.youtube.com/watch?v=Y1LUUM1R0GY" }
+        { "number": 3, "name": "Digital Bullet", "grade": "7a", "info": "sit start; FA Gasper Bratina", "video": "" },
+        { "number": 4, "name": "??", "grade": "6c", "info": "sit start", "video": "" },
+        { "number": 5, "name": "Wind Story", "grade": "8a", "info": "sit start; FA Bostjan Weingerl", "video": "" },
+        { "number": 6, "name": "Alone in the Darkness", "grade": "7c+", "info": "sit start; FA Bostjan Weingerl", "video": "https://www.youtube.com/watch?v=Y1LUUM1R0GY" }
       ]
     },
     {
@@ -51,7 +51,7 @@
       "topos": [{ "image": "orlovca3.jpg", "alt": "Boulder 3 topo" }],
       "problems": [
         { "number": 1, "name": "Do Benetk in nazaj", "grade": "6c+", "info": "sit start", "video": "https://vimeo.com/8040576#t=0m38s" },
-        { "number": 2, "name": "Crvina", "grade": "7a", "info": "sit start", "video": "https://vimeo.com/8040576#t=1m25s" }
+        { "number": 2, "name": "Črvina", "grade": "7a", "info": "sit start", "video": "https://vimeo.com/8040576#t=1m25s" }
       ]
     },
     {
@@ -59,7 +59,7 @@
       "id": "boulder-4",
       "topos": [{ "image": "orlovca4.jpg", "alt": "Boulder 4 topo" }],
       "problems": [
-        { "number": 1, "name": "Strazni stolp", "grade": "??", "info": "FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=4IcYa7ciVKA&t=61s" }
+        { "number": 1, "name": "Stražni stolp", "grade": "??", "info": "FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=4IcYa7ciVKA&t=61s" }
       ]
     },
     {
@@ -69,6 +69,16 @@
       "problems": [
         { "number": 1, "name": "Tango on the yeyo", "grade": "7b", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=dnBLSXB2nsQ&t=43s" },
         { "number": 2, "name": "Death grips", "grade": "6c", "info": "sit start", "video": "https://www.youtube.com/watch?v=dnBLSXB2nsQ&t=3m20s" }
+      ]
+    },
+    {
+      "name": "Boulder 6",
+      "id": "boulder-6",
+      "topos": [{ "image": "orlovca6.jpg", "alt": "Boulder 6 topo" }],
+      "problems": [
+        { "number": 1, "name": "Extinct Animal", "grade": "??", "info": "sit start", "video": "" },
+        { "number": 2, "name": "Lost Turtles", "grade": "??", "info": "sit start", "video": "" },
+        { "number": 3, "name": "Sabbra Cadabra", "grade": "??", "info": "sit start", "video": "" }
       ]
     }
   ]
