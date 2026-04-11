@@ -3,8 +3,8 @@
   "description": "18 boulders with 38 problems in a dense forest setting",
   "map_image": "podrta_gora_map.jpg",
   "gps": { "lat": 45.892432738378844, "lng": 13.9412306977008 },
-  "problem_count": 38,
-  "boulder_count": 18,
+  "problem_count": 39,
+  "boulder_count": 19,
   "grade_range": "4 - 8a+",
   "thumbnail": "podrta_gora9.jpg",
   "order": 0,
@@ -189,6 +189,14 @@
       "topos": [{ "image": "podrta_gora18.jpg", "alt": "Boulder 18 topo" }],
       "problems": [
         { "number": 1, "name": "Ex Machine", "grade": "7b", "info": "sit start", "video": "https://www.youtube.com/watch?v=J8tSoYaUJwo" }
+      ]
+    },
+    {
+      "name": "Boulder 19",
+      "id": "boulder-19",
+      "topos": [{ "image": "podrta_gora19.jpg", "alt": "Boulder 19 topo" }],
+      "problems": [
+        { "number": 1, "name": "Sunshine", "grade": "8a", "info": "sit start", "video": "https://www.youtube.com/watch?v=8QO4Kxe4EAg" }
       ]
     }
   ]
