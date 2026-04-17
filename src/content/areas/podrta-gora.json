@@ -107,6 +107,7 @@
     {
       "name": "Boulder 3",
       "id": "boulder-3",
+      "gps": { "lat": 45.89111, "lng": 13.94099 },
       "topos": [
         {
           "image": "podrta_gora3.jpg",
@@ -275,6 +276,7 @@
     {
       "name": "Boulder 8",
       "id": "boulder-8",
+      "gps": { "lat": 45.89203, "lng": 13.94248 },
       "topos": [
         {
           "image": "podrta_gora8.jpg",
@@ -411,6 +413,7 @@
     {
       "name": "Boulder 13",
       "id": "boulder-13",
+      "gps": { "lat": 45.89226, "lng": 13.94465 },
       "topos": [
         {
           "image": "podrta_gora13.jpg",
