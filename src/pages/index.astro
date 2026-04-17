@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AreaCard from '../components/AreaCard.astro';
 import ValleyMap from '../components/ValleyMap.astro';
+import Lightbox from '../components/Lightbox.astro';
 import { getCollection } from 'astro:content';
 
 const areas = await getCollection('areas');
@@ -23,7 +24,7 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
 
   <!-- Map -->
   <section class="map-section container">
-    <ValleyMap areas={sortedAreas} />
+    <ValleyMap areas={sortedAreas} mapImage="vv_boldermap.jpg" />
   </section>
 
   <!-- Area Cards -->
@@ -57,6 +58,8 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
       <li>Guide to Vitovlje bouldering: <a href="/Bouldering_Vitovlje_2012.pdf">PDF</a>, <a href="http://www.krimp.si/vitovlje/#1557066366465-fa5dc4c7-8b0f">web</a></li>
     </ul>
   </section>
+
+  <Lightbox />
 </BaseLayout>
 
 <style>

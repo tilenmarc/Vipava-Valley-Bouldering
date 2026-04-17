@@ -12,9 +12,10 @@ interface Area {
 
 interface Props {
   areas: Area[];
+  mapImage?: string;
 }
 
-const { areas } = Astro.props;
+const { areas, mapImage } = Astro.props;
 
 const mapData = areas.map(a => ({
   id: a.id,
@@ -30,6 +31,14 @@ const mapData = areas.map(a => ({
 <div class="valley-map-wrapper">
   <div id="valley-map" class="leaflet-map"></div>
   <script type="application/json" id="valley-map-data" set:html={JSON.stringify(mapData)}></script>
+  <div class="map-controls">
+    {mapImage && (
+      <button class="static-map-btn" data-src={`/images/${mapImage}`} data-alt="Hand-drawn map of Vipava Valley">
+        View hand-drawn map
+      </button>
+    )}
+    <button class="locate-btn" type="button" aria-pressed="false">Show my location</button>
+  </div>
 </div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -85,6 +94,81 @@ const mapData = areas.map(a => ({
       var bounds = L.latLngBounds(areas.map(function(a) { return [a.lat, a.lng]; }));
       map.fitBounds(bounds, { padding: [30, 30] });
     }
+
+    // Static map button → open in lightbox
+    var btn = document.querySelector('.valley-map-wrapper .static-map-btn');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var lightbox = document.getElementById('lightbox');
+        var img = lightbox && lightbox.querySelector('.lightbox-img');
+        if (lightbox && img) {
+          img.src = btn.getAttribute('data-src');
+          img.alt = btn.getAttribute('data-alt');
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+
+    // Locate me toggle
+    var locateBtn = document.querySelector('.valley-map-wrapper .locate-btn');
+    if (locateBtn && 'geolocation' in navigator) {
+      var userMarker = null;
+      var userCircle = null;
+      var watching = false;
+
+      var onFound = function(e) {
+        var latlng = [e.latitude, e.longitude];
+        if (!userMarker) {
+          userMarker = L.circleMarker(latlng, {
+            radius: 7,
+            fillColor: '#1e88e5',
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 1,
+          }).addTo(map);
+          userCircle = L.circle(latlng, {
+            radius: e.accuracy,
+            color: '#1e88e5',
+            fillColor: '#1e88e5',
+            fillOpacity: 0.1,
+            weight: 1,
+          }).addTo(map);
+        } else {
+          userMarker.setLatLng(latlng);
+          userCircle.setLatLng(latlng).setRadius(e.accuracy);
+        }
+      };
+
+      var onError = function() {
+        locateBtn.textContent = 'Location unavailable';
+        locateBtn.disabled = true;
+      };
+
+      locateBtn.addEventListener('click', function() {
+        if (watching) {
+          map.stopLocate();
+          map.off('locationfound', onFound);
+          map.off('locationerror', onError);
+          if (userMarker) { map.removeLayer(userMarker); userMarker = null; }
+          if (userCircle) { map.removeLayer(userCircle); userCircle = null; }
+          watching = false;
+          locateBtn.textContent = 'Show my location';
+          locateBtn.setAttribute('aria-pressed', 'false');
+        } else {
+          map.on('locationfound', onFound);
+          map.on('locationerror', onError);
+          map.locate({ watch: true, enableHighAccuracy: true, setView: false });
+          watching = true;
+          locateBtn.textContent = 'Hide my location';
+          locateBtn.setAttribute('aria-pressed', 'true');
+        }
+      });
+    } else if (locateBtn) {
+      locateBtn.disabled = true;
+      locateBtn.textContent = 'Location unavailable';
+    }
   });
 </script>
 
@@ -105,6 +189,41 @@ const mapData = areas.map(a => ({
     .leaflet-map {
       height: 420px;
     }
+  }
+
+  .map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .static-map-btn,
+  .locate-btn {
+    padding: 0.25rem 0.625rem;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .static-map-btn:hover,
+  .locate-btn:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .locate-btn[aria-pressed="true"] {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .locate-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
   }
 </style>
 
