@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import BoulderNav from '../../components/BoulderNav.astro';
 import BoulderSection from '../../components/BoulderSection.astro';
+import AreaMap from '../../components/AreaMap.astro';
 import Lightbox from '../../components/Lightbox.astro';
 import { getCollection } from 'astro:content';
 
@@ -51,16 +52,7 @@ const allBoulders = boulders
     </header>
 
     <!-- Area Map -->
-    {map_image && (
-      <div class="area-map">
-        <img
-          src={`/images/${map_image}`}
-          alt={`Map of ${title}`}
-          loading="eager"
-          data-lightbox
-        />
-      </div>
-    )}
+    <AreaMap areaGps={gps} areaTitle={title} boulders={allBoulders} mapImage={map_image || undefined} />
 
     <!-- Toolbar: Boulder Navigation + Grade Filter -->
     <div class="area-toolbar">

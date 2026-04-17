@@ -17,6 +17,7 @@ const topoSchema = z.object({
 const boulderSchema = z.object({
   name: z.string(),
   id: z.string(),
+  gps: z.object({ lat: z.number(), lng: z.number() }).optional(),
   topos: z.array(topoSchema),
   problems: z.array(problemSchema),
 });

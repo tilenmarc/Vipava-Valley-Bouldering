@@ -1,0 +1,271 @@
+---
+interface Boulder {
+  name: string;
+  id: string;
+  gps?: { lat: number; lng: number };
+  problems: { number: number; name: string; grade: string }[];
+}
+
+interface Props {
+  areaGps: { lat: number; lng: number };
+  areaTitle: string;
+  boulders: Boulder[];
+  mapImage?: string;
+}
+
+const { areaGps, areaTitle, boulders, mapImage } = Astro.props;
+
+const bouldersWithGps = boulders.filter(b => b.gps);
+const mapBoulders = bouldersWithGps.map(b => ({
+  id: b.id,
+  name: b.name,
+  lat: b.gps!.lat,
+  lng: b.gps!.lng,
+  count: b.problems.length,
+}));
+---
+
+<div class="area-map-wrapper">
+  <div id="area-map" class="leaflet-map"></div>
+  <script type="application/json" id="area-map-data" set:html={JSON.stringify({
+    center: areaGps,
+    title: areaTitle,
+    boulders: mapBoulders,
+  })}></script>
+  <div class="map-controls">
+    {mapImage && (
+      <button class="static-map-btn" data-src={`/images/${mapImage}`} data-alt={`Static map of ${areaTitle}`}>
+        View hand-drawn map
+      </button>
+    )}
+    <button class="locate-btn" type="button" aria-pressed="false">Show my location</button>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var dataEl = document.getElementById('area-map-data');
+    if (!dataEl || !window.L) return;
+    var data = JSON.parse(dataEl.textContent);
+
+    var isMobile = window.innerWidth < 768;
+
+    var map = L.map('area-map', {
+      scrollWheelZoom: false,
+      dragging: !isMobile,
+      tap: true,
+      attributionControl: false,
+    }).setView([data.center.lat, data.center.lng], 15);
+
+    L.control.attribution({ prefix: false }).addTo(map);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+      maxZoom: 18,
+    }).addTo(map);
+
+    if (data.boulders.length > 0) {
+      // Per-boulder markers
+      data.boulders.forEach(function(b, i) {
+        var marker = L.circleMarker([b.lat, b.lng], {
+          radius: 12,
+          fillColor: '#3d6b4f',
+          color: '#2d4f3a',
+          weight: 2,
+          opacity: 1,
+          fillOpacity: 0.9,
+        }).addTo(map);
+
+        // Number label
+        var icon = L.divIcon({
+          className: 'boulder-marker-label',
+          html: '<span>' + (b.name.match(/\d+/) || [i + 1])[0] + '</span>',
+          iconSize: [24, 24],
+          iconAnchor: [12, 12],
+        });
+        L.marker([b.lat, b.lng], { icon: icon }).addTo(map);
+
+        marker.bindPopup(
+          '<strong>' + b.name + '</strong><br>' +
+          b.count + ' problem' + (b.count === 1 ? '' : 's') + '<br>' +
+          '<a href="#' + b.id + '" style="color:#3d6b4f;font-weight:600;">Scroll to boulder &darr;</a>'
+        );
+
+        marker.on('click', function() {
+          marker.openPopup();
+        });
+      });
+
+      // Fit bounds
+      var bounds = L.latLngBounds(data.boulders.map(function(b) { return [b.lat, b.lng]; }));
+      map.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
+    } else {
+      // Single area marker
+      L.circleMarker([data.center.lat, data.center.lng], {
+        radius: 12,
+        fillColor: '#3d6b4f',
+        color: '#2d4f3a',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9,
+      }).addTo(map).bindPopup('<strong>' + data.title + '</strong>');
+    }
+
+    // Enable dragging on mobile after first interaction
+    if (isMobile) {
+      map.once('click', function() {
+        map.dragging.enable();
+      });
+    }
+
+    // Static map button → open in lightbox
+    var btn = document.querySelector('.static-map-btn');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var lightbox = document.getElementById('lightbox');
+        var img = lightbox && lightbox.querySelector('.lightbox-img');
+        if (lightbox && img) {
+          img.src = btn.getAttribute('data-src');
+          img.alt = btn.getAttribute('data-alt');
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+
+    // Locate me toggle
+    var locateBtn = document.querySelector('.locate-btn');
+    if (locateBtn && 'geolocation' in navigator) {
+      var userMarker = null;
+      var userCircle = null;
+      var watching = false;
+
+      var onFound = function(e) {
+        var latlng = [e.latitude, e.longitude];
+        if (!userMarker) {
+          userMarker = L.circleMarker(latlng, {
+            radius: 7,
+            fillColor: '#1e88e5',
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 1,
+          }).addTo(map);
+          userCircle = L.circle(latlng, {
+            radius: e.accuracy,
+            color: '#1e88e5',
+            fillColor: '#1e88e5',
+            fillOpacity: 0.1,
+            weight: 1,
+          }).addTo(map);
+        } else {
+          userMarker.setLatLng(latlng);
+          userCircle.setLatLng(latlng).setRadius(e.accuracy);
+        }
+      };
+
+      var onError = function() {
+        locateBtn.textContent = 'Location unavailable';
+        locateBtn.disabled = true;
+      };
+
+      locateBtn.addEventListener('click', function() {
+        if (watching) {
+          map.stopLocate();
+          map.off('locationfound', onFound);
+          map.off('locationerror', onError);
+          if (userMarker) { map.removeLayer(userMarker); userMarker = null; }
+          if (userCircle) { map.removeLayer(userCircle); userCircle = null; }
+          watching = false;
+          locateBtn.textContent = 'Show my location';
+          locateBtn.setAttribute('aria-pressed', 'false');
+        } else {
+          map.on('locationfound', onFound);
+          map.on('locationerror', onError);
+          map.locate({ watch: true, enableHighAccuracy: true, setView: false });
+          watching = true;
+          locateBtn.textContent = 'Hide my location';
+          locateBtn.setAttribute('aria-pressed', 'true');
+        }
+      });
+    } else if (locateBtn) {
+      locateBtn.disabled = true;
+      locateBtn.textContent = 'Location unavailable';
+    }
+  });
+</script>
+
+<style>
+  .area-map-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .leaflet-map {
+    height: 300px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    z-index: 0;
+  }
+
+  @media (min-width: 768px) {
+    .leaflet-map {
+      height: 380px;
+    }
+  }
+
+  .map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .static-map-btn,
+  .locate-btn {
+    padding: 0.25rem 0.625rem;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .static-map-btn:hover,
+  .locate-btn:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .locate-btn[aria-pressed="true"] {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .locate-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+</style>
+
+<style is:global>
+  .boulder-marker-label {
+    background: none !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .boulder-marker-label span {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+</style>

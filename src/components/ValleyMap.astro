@@ -1,0 +1,129 @@
+---
+interface Area {
+  id: string;
+  data: {
+    title: string;
+    gps: { lat: number; lng: number };
+    problem_count: number;
+    boulder_count: number;
+    grade_range: string;
+  };
+}
+
+interface Props {
+  areas: Area[];
+}
+
+const { areas } = Astro.props;
+
+const mapData = areas.map(a => ({
+  id: a.id,
+  title: a.data.title,
+  lat: a.data.gps.lat,
+  lng: a.data.gps.lng,
+  problems: a.data.problem_count,
+  boulders: a.data.boulder_count,
+  grades: a.data.grade_range,
+}));
+---
+
+<div class="valley-map-wrapper">
+  <div id="valley-map" class="leaflet-map"></div>
+  <script type="application/json" id="valley-map-data" set:html={JSON.stringify(mapData)}></script>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var dataEl = document.getElementById('valley-map-data');
+    if (!dataEl || !window.L) return;
+    var areas = JSON.parse(dataEl.textContent);
+
+    var map = L.map('valley-map', {
+      scrollWheelZoom: false,
+      tap: true,
+      attributionControl: false,
+    }).setView([45.90, 13.94], 12);
+
+    L.control.attribution({ prefix: false }).addTo(map);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+      maxZoom: 18,
+    }).addTo(map);
+
+    areas.forEach(function(a) {
+      var marker = L.circleMarker([a.lat, a.lng], {
+        radius: 10,
+        fillColor: '#3d6b4f',
+        color: '#2d4f3a',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9,
+      }).addTo(map);
+
+      var label = L.divIcon({
+        className: 'area-marker-label',
+        html: '<span>' + a.title + '</span>',
+        iconSize: [0, 0],
+        iconAnchor: [-14, 10],
+      });
+      L.marker([a.lat, a.lng], { icon: label, interactive: false, keyboard: false }).addTo(map);
+
+      marker.bindPopup(
+        '<strong>' + a.title + '</strong><br>' +
+        a.boulders + ' boulders &middot; ' + a.problems + ' problems<br>' +
+        'Grades ' + a.grades + '<br>' +
+        '<a href="/areas/' + a.id + '/" style="color:#3d6b4f;font-weight:600;">View area &rarr;</a>'
+      );
+    });
+
+    // Fit bounds to all markers
+    if (areas.length > 0) {
+      var bounds = L.latLngBounds(areas.map(function(a) { return [a.lat, a.lng]; }));
+      map.fitBounds(bounds, { padding: [30, 30] });
+    }
+  });
+</script>
+
+<style>
+  .valley-map-wrapper {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .leaflet-map {
+    height: 350px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    z-index: 0;
+  }
+
+  @media (min-width: 768px) {
+    .leaflet-map {
+      height: 420px;
+    }
+  }
+</style>
+
+<style is:global>
+  .area-marker-label {
+    background: none !important;
+    border: none !important;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .area-marker-label span {
+    display: inline-block;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 4px;
+    color: #2d4f3a;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+</style>

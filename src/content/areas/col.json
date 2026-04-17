@@ -12,6 +12,7 @@
     {
       "name": "Boulder 1",
       "id": "boulder-1",
+      "gps": { "lat": 45.88738, "lng": 13.99869 },
       "topos": [{ "image": "col1.jpg", "alt": "Boulder 1 topo" }],
       "problems": [
         { "number": 1, "name": "?", "grade": "5", "info": "sit start", "video": "" },
@@ -21,6 +22,7 @@
     {
       "name": "Boulder 2",
       "id": "boulder-2",
+      "gps": { "lat": 45.88747, "lng": 13.99847 },
       "topos": [
         { "image": "col2.jpg", "alt": "Boulder 2 front" },
         { "image": "col2b.jpg", "alt": "Boulder 2 side" }
@@ -35,6 +37,7 @@
     {
       "name": "Boulder 3",
       "id": "boulder-3",
+      "gps": { "lat": 45.88746, "lng": 13.99842 },
       "topos": [{ "image": "col3.jpg", "alt": "Boulder 3 topo" }],
       "problems": [
         { "number": 1, "name": "?", "grade": "5", "info": "", "video": "" }
@@ -43,6 +46,7 @@
     {
       "name": "Boulder 4",
       "id": "boulder-4",
+      "gps": { "lat": 45.88747, "lng": 13.99842 },
       "topos": [{ "image": "col4.jpg", "alt": "Boulder 4 topo" }],
       "problems": [
         { "number": 1, "name": "Dread man", "grade": "7c+", "info": "", "video": "https://vimeo.com/6599037#t=0m27s" },
@@ -55,6 +59,7 @@
     {
       "name": "Boulder 5: Wu Bloc",
       "id": "wu-bloc",
+      "gps": { "lat": 45.88994, "lng": 13.99533 },
       "topos": [
         { "image": "col_wu_a.jpg", "alt": "Wu Bloc front" },
         { "image": "col_wu_b.jpg", "alt": "Wu Bloc side" }

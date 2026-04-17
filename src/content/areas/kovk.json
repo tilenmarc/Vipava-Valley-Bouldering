@@ -12,6 +12,7 @@
     {
       "name": "Boulder 1",
       "id": "boulder-1",
+      "gps": { "lat": 45.88158, "lng": 13.96999 },
       "topos": [{ "image": "kowk2.jpg", "alt": "Boulder 1 topo" }],
       "problems": [
         { "number": 1, "name": "Kowkberg", "grade": "7a", "info": "", "video": "https://www.youtube.com/watch?v=kaiGq2T3Bhk&t=5m53s" }
@@ -20,6 +21,7 @@
     {
       "name": "Boulder 2",
       "id": "boulder-2",
+      "gps": { "lat": 45.88401, "lng": 13.96960 },
       "topos": [{ "image": "kowk1.jpg", "alt": "Boulder 2 topo" }],
       "problems": [
         { "number": 1, "name": "Moral Midegetry", "grade": "6c", "info": "sit start", "video": "https://www.youtube.com/watch?v=dAyonrCRAPM&t=10" }

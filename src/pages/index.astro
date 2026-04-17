@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AreaCard from '../components/AreaCard.astro';
+import ValleyMap from '../components/ValleyMap.astro';
 import { getCollection } from 'astro:content';
 
 const areas = await getCollection('areas');
@@ -22,12 +23,7 @@ const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 
 
   <!-- Map -->
   <section class="map-section container">
-    <img
-      src="/images/vv_boldermap.jpg"
-      alt="Map of boulder areas in Vipava Valley"
-      class="valley-map"
-      loading="eager"
-    />
+    <ValleyMap areas={sortedAreas} />
   </section>
 
   <!-- Area Cards -->

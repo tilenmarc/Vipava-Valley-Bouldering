@@ -2,7 +2,10 @@
   "title": "Yugo skala",
   "description": "The iconic Yugo skala boulder with 5 hard problems",
   "map_image": "",
-  "gps": { "lat": 45.91065662865047, "lng": 13.875388080578066 },
+  "gps": {
+    "lat": 45.91065662865047,
+    "lng": 13.875388080578066
+  },
   "problem_count": 5,
   "boulder_count": 1,
   "grade_range": "7c - 8b",
@@ -13,15 +16,54 @@
       "name": "Yugo skala",
       "id": "yugo-skala",
       "topos": [
-        { "image": "jugoskala1.jpg", "alt": "Yugo skala front" },
-        { "image": "jugoskala2.jpg", "alt": "Yugo skala side" }
+        {
+          "image": "jugoskala1.jpg",
+          "alt": "Yugo skala front"
+        },
+        {
+          "image": "jugoskala2.jpg",
+          "alt": "Yugo skala side"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Night life", "grade": "8b", "info": "sit start", "video": "https://www.instagram.com/p/CHbJz6iDo4z/" },
-        { "number": 2, "name": "Slice of life", "grade": "8a", "info": "sit start", "video": "https://vimeo.com/10454293" },
-        { "number": 3, "name": "Fast life", "grade": "8a", "info": "sit start", "video": "https://www.instagram.com/p/CAa2YhpDd_H/" },
-        { "number": 4, "name": "The Mechanic", "grade": "8b", "info": "sit start; FA Bostjan Weingerl", "video": ["https://vimeo.com/97145582", "https://www.youtube.com/watch?v=pj3Q7qIzgOA"] },
-        { "number": 5, "name": "Fuel my fire", "grade": "7c", "info": "sit start", "video": "https://vimeo.com/37702097" }
+        {
+          "number": 1,
+          "name": "Night life",
+          "grade": "8b",
+          "info": "sit start",
+          "video": "https://www.instagram.com/p/CHbJz6iDo4z/"
+        },
+        {
+          "number": 2,
+          "name": "Slice of life",
+          "grade": "8a",
+          "info": "sit start",
+          "video": "https://vimeo.com/10454293"
+        },
+        {
+          "number": 3,
+          "name": "Fast life",
+          "grade": "8a",
+          "info": "sit start",
+          "video": "https://www.instagram.com/p/CAa2YhpDd_H/"
+        },
+        {
+          "number": 4,
+          "name": "The Mechanic",
+          "grade": "8b",
+          "info": "sit start; FA Bostjan Weingerl",
+          "video": [
+            "https://vimeo.com/97145582",
+            "https://www.youtube.com/watch?v=pj3Q7qIzgOA"
+          ]
+        },
+        {
+          "number": 5,
+          "name": "Fuel my fire",
+          "grade": "7c",
+          "info": "sit start",
+          "video": "https://vimeo.com/37702097"
+        }
       ]
     }
   ]

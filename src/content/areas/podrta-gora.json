@@ -2,7 +2,10 @@
   "title": "Podrta Gora",
   "description": "18 boulders with 38 problems in a dense forest setting",
   "map_image": "podrta_gora_map.jpg",
-  "gps": { "lat": 45.892432738378844, "lng": 13.9412306977008 },
+  "gps": {
+    "lat": 45.892432738378844,
+    "lng": 13.9412306977008
+  },
   "problem_count": 39,
   "boulder_count": 19,
   "grade_range": "4 - 8a+",
@@ -12,192 +15,591 @@
     {
       "name": "Boulder 1",
       "id": "boulder-1",
+      "gps": {
+        "lat": 45.892505,
+        "lng": 13.940965
+      },
       "topos": [
-        { "image": "podrta_gora1.jpg", "alt": "Boulder 1 front face" },
-        { "image": "podrta_gora1b.jpg", "alt": "Boulder 1 back face" }
+        {
+          "image": "podrta_gora1.jpg",
+          "alt": "Boulder 1 front face"
+        },
+        {
+          "image": "podrta_gora1b.jpg",
+          "alt": "Boulder 1 back face"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Notorious B.I.G.", "grade": "8a+", "info": "sit start", "video": "https://vimeo.com/148803563" },
-        { "number": 2, "name": "B.I.G.", "grade": "7b+", "info": "", "video": "https://vimeo.com/21527739" },
-        { "number": 3, "name": "Toestaky", "grade": "7C", "info": "sit start", "video": "https://www.youtube.com/watch?v=qclRIGUWbGk&t=2m25s" },
-        { "number": 4, "name": "??", "grade": "4", "info": "sit start", "video": "" },
-        { "number": 5, "name": "??", "grade": "5", "info": "sit start", "video": "" },
-        { "number": 6, "name": "??", "grade": "6a", "info": "sit start", "video": "" },
-        { "number": 7, "name": "??", "grade": "6b", "info": "sit start", "video": "" }
+        {
+          "number": 1,
+          "name": "Notorious B.I.G.",
+          "grade": "8a+",
+          "info": "sit start",
+          "video": "https://vimeo.com/148803563"
+        },
+        {
+          "number": 2,
+          "name": "B.I.G.",
+          "grade": "7b+",
+          "info": "",
+          "video": "https://vimeo.com/21527739"
+        },
+        {
+          "number": 3,
+          "name": "Toestaky",
+          "grade": "7C",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=qclRIGUWbGk&t=2m25s"
+        },
+        {
+          "number": 4,
+          "name": "??",
+          "grade": "4",
+          "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 5,
+          "name": "??",
+          "grade": "5",
+          "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 6,
+          "name": "??",
+          "grade": "6a",
+          "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 7,
+          "name": "??",
+          "grade": "6b",
+          "info": "sit start",
+          "video": ""
+        }
       ]
     },
     {
       "name": "Boulder 2",
       "id": "boulder-2",
-      "topos": [{ "image": "podrta_gora2.jpg", "alt": "Boulder 2 topo" }],
+      "gps": {
+        "lat": 45.89233,
+        "lng": 13.94087
+      },
+      "topos": [
+        {
+          "image": "podrta_gora2.jpg",
+          "alt": "Boulder 2 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Method Man", "grade": "7a", "info": "sit start", "video": "https://vimeo.com/83154006" }
+        {
+          "number": 1,
+          "name": "Method Man",
+          "grade": "7a",
+          "info": "sit start",
+          "video": "https://vimeo.com/83154006"
+        }
       ]
     },
     {
       "name": "Boulder 3",
       "id": "boulder-3",
-      "topos": [{ "image": "podrta_gora3.jpg", "alt": "Boulder 3 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora3.jpg",
+          "alt": "Boulder 3 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "White Widow", "grade": "7a", "info": "sit start", "video": "https://www.youtube.com/watch?v=KbvSSgW6Ygk" }
+        {
+          "number": 1,
+          "name": "White Widow",
+          "grade": "7a",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=KbvSSgW6Ygk"
+        }
       ]
     },
     {
       "name": "Boulder 4",
       "id": "boulder-4",
       "topos": [
-        { "image": "podrta_gora4.jpg", "alt": "Boulder 4 front" },
-        { "image": "podrta_gora4b.jpg", "alt": "Boulder 4 side" }
+        {
+          "image": "podrta_gora4.jpg",
+          "alt": "Boulder 4 front"
+        },
+        {
+          "image": "podrta_gora4b.jpg",
+          "alt": "Boulder 4 side"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Frfljo Drajsat", "grade": "6b+", "info": "low sit start", "video": "" },
-        { "number": 2, "name": "Orange Season", "grade": "??", "info": "sit start; FA Gasper Bratina", "video": "https://www.youtube.com/watch?v=dAyonrCRAPM&t=1m53s" },
-        { "number": 3, "name": "??", "grade": "6a", "info": "sit start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "Frfljo Drajsat",
+          "grade": "6b+",
+          "info": "low sit start",
+          "video": ""
+        },
+        {
+          "number": 2,
+          "name": "Orange Season",
+          "grade": "??",
+          "info": "sit start; FA Gasper Bratina",
+          "video": "https://www.youtube.com/watch?v=dAyonrCRAPM&t=1m53s"
+        },
+        {
+          "number": 3,
+          "name": "??",
+          "grade": "6a",
+          "info": "sit start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89116,
+        "lng": 13.94146
+      }
     },
     {
       "name": "Boulder 5",
       "id": "boulder-5",
-      "topos": [{ "image": "podrta_gora5.jpg", "alt": "Boulder 5 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora5.jpg",
+          "alt": "Boulder 5 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Man With An Iron Fish", "grade": "7a", "info": "sit start", "video": "" },
-        { "number": 2, "name": "Man With An Iron Fist", "grade": "7b", "info": "sit start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "Man With An Iron Fish",
+          "grade": "7a",
+          "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 2,
+          "name": "Man With An Iron Fist",
+          "grade": "7b",
+          "info": "sit start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89184,
+        "lng": 13.9421
+      }
     },
     {
       "name": "Boulder 6",
       "id": "boulder-6",
       "topos": [
-        { "image": "podrta_gora6.jpg", "alt": "Boulder 6 front" },
-        { "image": "podrta_gora6b.jpg", "alt": "Boulder 6 side" }
+        {
+          "image": "podrta_gora6.jpg",
+          "alt": "Boulder 6 front"
+        },
+        {
+          "image": "podrta_gora6b.jpg",
+          "alt": "Boulder 6 side"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Flux", "grade": "7b", "info": "sit start; FA Bostjan Weingerl", "video": "https://www.youtube.com/watch?v=vUYrttenb9I&t=5m22s" },
-        { "number": 2, "name": "Superflux", "grade": "7c", "info": "sit start; FA Gregor Seliga", "video": "https://www.instagram.com/p/CH53YxzFQtg/" },
-        { "number": 3, "name": "??", "grade": "6b", "info": "sit start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "Flux",
+          "grade": "7b",
+          "info": "sit start; FA Bostjan Weingerl",
+          "video": "https://www.youtube.com/watch?v=vUYrttenb9I&t=5m22s"
+        },
+        {
+          "number": 2,
+          "name": "Superflux",
+          "grade": "7c",
+          "info": "sit start; FA Gregor Seliga",
+          "video": "https://www.instagram.com/p/CH53YxzFQtg/"
+        },
+        {
+          "number": 3,
+          "name": "??",
+          "grade": "6b",
+          "info": "sit start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89205,
+        "lng": 13.94315
+      }
     },
     {
       "name": "Boulder 7",
       "id": "boulder-7",
-      "topos": [{ "image": "podrta_gora7.jpg", "alt": "Boulder 7 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora7.jpg",
+          "alt": "Boulder 7 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Hrabri Misek", "grade": "7b", "info": "sit start", "video": "https://www.youtube.com/watch?v=vUYrttenb9I&t=3m44s" },
-        { "number": 2, "name": "Poldi", "grade": "6c", "info": "sit start", "video": "" },
-        { "number": 3, "name": "Polentozerka", "grade": "??", "info": "sit start", "video": "https://www.youtube.com/watch?v=vUYrttenb9I&t=4m35s" }
-      ]
+        {
+          "number": 1,
+          "name": "Hrabri Misek",
+          "grade": "7b",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=vUYrttenb9I&t=3m44s"
+        },
+        {
+          "number": 2,
+          "name": "Poldi",
+          "grade": "6c",
+          "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 3,
+          "name": "Polentozerka",
+          "grade": "??",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=vUYrttenb9I&t=4m35s"
+        }
+      ],
+      "gps": {
+        "lat": 45.89228,
+        "lng": 13.94333
+      }
     },
     {
       "name": "Boulder 8",
       "id": "boulder-8",
-      "topos": [{ "image": "podrta_gora8.jpg", "alt": "Boulder 8 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora8.jpg",
+          "alt": "Boulder 8 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Lil Wayne", "grade": "7a", "info": "sit start", "video": "" }
+        {
+          "number": 1,
+          "name": "Lil Wayne",
+          "grade": "7a",
+          "info": "sit start",
+          "video": ""
+        }
       ]
     },
     {
       "name": "Boulder 9",
       "id": "boulder-9",
       "topos": [
-        { "image": "podrta_gora9.jpg", "alt": "Boulder 9 front" },
-        { "image": "podrta_gora9b.jpg", "alt": "Boulder 9 side" }
+        {
+          "image": "podrta_gora9.jpg",
+          "alt": "Boulder 9 front"
+        },
+        {
+          "image": "podrta_gora9b.jpg",
+          "alt": "Boulder 9 side"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Forest Sword", "grade": "7b", "info": "sit start", "video": "" },
-        { "number": 2, "name": "Oldies Goldies", "grade": "8a", "info": "sit start; FA Bostjan Weingerl", "video": "https://www.youtube.com/watch?v=v0gp7BnhbC0" },
-        { "number": 3, "name": "??", "grade": "6c", "info": "sit start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "Forest Sword",
+          "grade": "7b",
+          "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 2,
+          "name": "Oldies Goldies",
+          "grade": "8a",
+          "info": "sit start; FA Bostjan Weingerl",
+          "video": "https://www.youtube.com/watch?v=v0gp7BnhbC0"
+        },
+        {
+          "number": 3,
+          "name": "??",
+          "grade": "6c",
+          "info": "sit start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89218,
+        "lng": 13.94274
+      }
     },
     {
       "name": "Boulder 10",
       "id": "boulder-10",
-      "topos": [{ "image": "podrta_gora10.jpg", "alt": "Boulder 10 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora10.jpg",
+          "alt": "Boulder 10 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "G13", "grade": "6b", "info": "sit start", "video": "https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s" },
-        { "number": 2, "name": "??", "grade": "??", "info": "", "video": "https://vimeo.com/14768186#t=0m48s" }
-      ]
+        {
+          "number": 1,
+          "name": "G13",
+          "grade": "6b",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=3m17s"
+        },
+        {
+          "number": 2,
+          "name": "??",
+          "grade": "??",
+          "info": "",
+          "video": "https://vimeo.com/14768186#t=0m48s"
+        }
+      ],
+      "gps": {
+        "lat": 45.8916,
+        "lng": 13.94311
+      }
     },
     {
       "name": "Boulder 11",
       "id": "boulder-11",
-      "topos": [{ "image": "podrta_gora11.jpg", "alt": "Boulder 11 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora11.jpg",
+          "alt": "Boulder 11 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Trainwreck", "grade": "7c", "info": "sit start", "video": "https://vimeo.com/59001324" }
-      ]
+        {
+          "number": 1,
+          "name": "Trainwreck",
+          "grade": "7c",
+          "info": "sit start",
+          "video": "https://vimeo.com/59001324"
+        }
+      ],
+      "gps": {
+        "lat": 45.89161,
+        "lng": 13.94313
+      }
     },
     {
       "name": "Boulder 12",
       "id": "boulder-12",
-      "topos": [{ "image": "podrta_gora12.jpg", "alt": "Boulder 12 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora12.jpg",
+          "alt": "Boulder 12 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Jam Crack", "grade": "6b", "info": "sit start", "video": "https://www.youtube.com/watch?v=KByYVZiAiPc&t=3m56s" }
-      ]
+        {
+          "number": 1,
+          "name": "Jam Crack",
+          "grade": "6b",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=KByYVZiAiPc&t=3m56s"
+        }
+      ],
+      "gps": {
+        "lat": 45.8915,
+        "lng": 13.94331
+      }
     },
     {
       "name": "Boulder 13",
       "id": "boulder-13",
-      "topos": [{ "image": "podrta_gora13.jpg", "alt": "Boulder 13 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora13.jpg",
+          "alt": "Boulder 13 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Winter's bone", "grade": "7a", "info": "", "video": "https://vimeo.com/63508162" },
-        { "number": 2, "name": "Dopethrone", "grade": "??", "info": "", "video": "https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=1m25s" }
+        {
+          "number": 1,
+          "name": "Winter's bone",
+          "grade": "7a",
+          "info": "",
+          "video": "https://vimeo.com/63508162"
+        },
+        {
+          "number": 2,
+          "name": "Dopethrone",
+          "grade": "??",
+          "info": "",
+          "video": "https://www.youtube.com/watch?v=n-JZ4Dp5Z0k&t=1m25s"
+        }
       ]
     },
     {
       "name": "Boulder 14",
       "id": "boulder-14",
       "topos": [
-        { "image": "podrta_gora14a.jpg", "alt": "Boulder 14 front" },
-        { "image": "podrta_gora14b.jpg", "alt": "Boulder 14 back" }
+        {
+          "image": "podrta_gora14a.jpg",
+          "alt": "Boulder 14 front"
+        },
+        {
+          "image": "podrta_gora14b.jpg",
+          "alt": "Boulder 14 back"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Dead Pony Club", "grade": "??", "info": "sit start; FA Gasper Bratina", "video": "https://www.instagram.com/p/CMXXkosj5l2/?utm_source=ig_web_copy_link" },
-        { "number": 2, "name": "??", "grade": "6b", "info": "sit start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "Dead Pony Club",
+          "grade": "??",
+          "info": "sit start; FA Gasper Bratina",
+          "video": "https://www.instagram.com/p/CMXXkosj5l2/?utm_source=ig_web_copy_link"
+        },
+        {
+          "number": 2,
+          "name": "??",
+          "grade": "6b",
+          "info": "sit start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89231,
+        "lng": 13.9445
+      }
     },
     {
       "name": "Boulder 15",
       "id": "boulder-15",
-      "topos": [{ "image": "podrta_gora15.jpg", "alt": "Boulder 15 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora15.jpg",
+          "alt": "Boulder 15 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "??", "grade": "6b", "info": "sit start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "??",
+          "grade": "6b",
+          "info": "sit start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89246,
+        "lng": 13.94466
+      }
     },
     {
       "name": "Boulder 16",
       "id": "boulder-16",
-      "topos": [{ "image": "podrta_gora16.jpg", "alt": "Boulder 16 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora16.jpg",
+          "alt": "Boulder 16 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "??", "grade": "7b", "info": "designated start", "video": "" }
-      ]
+        {
+          "number": 1,
+          "name": "??",
+          "grade": "7b",
+          "info": "designated start",
+          "video": ""
+        }
+      ],
+      "gps": {
+        "lat": 45.89213,
+        "lng": 13.94271
+      }
     },
     {
       "name": "Boulder 17",
       "id": "boulder-17",
       "topos": [
-        { "image": "podrta_gora17a.jpg", "alt": "Boulder 17 front" },
-        { "image": "podrta_gora17b.jpg", "alt": "Boulder 17 side" }
+        {
+          "image": "podrta_gora17a.jpg",
+          "alt": "Boulder 17 front"
+        },
+        {
+          "image": "podrta_gora17b.jpg",
+          "alt": "Boulder 17 side"
+        }
       ],
       "problems": [
-        { "number": 1, "name": "Poka po sivih", "grade": "7c", "info": "sit start", "video": "https://www.youtube.com/watch?v=sseQJxOmc0s" },
-        { "number": 2, "name": "??", "grade": "??", "info": "sit start", "video": "https://vimeo.com/14768186#t=4m0s" },
-        { "number": 3, "name": "??", "grade": "??", "info": "sit start", "video": "https://vimeo.com/14768186#t=1m34s" }
-      ]
+        {
+          "number": 1,
+          "name": "Poka po sivih",
+          "grade": "7c",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=sseQJxOmc0s"
+        },
+        {
+          "number": 2,
+          "name": "??",
+          "grade": "??",
+          "info": "sit start",
+          "video": "https://vimeo.com/14768186#t=4m0s"
+        },
+        {
+          "number": 3,
+          "name": "??",
+          "grade": "??",
+          "info": "sit start",
+          "video": "https://vimeo.com/14768186#t=1m34s"
+        }
+      ],
+      "gps": {
+        "lat": 45.89114,
+        "lng": 13.94112
+      }
     },
     {
       "name": "Boulder 18",
       "id": "boulder-18",
-      "topos": [{ "image": "podrta_gora18.jpg", "alt": "Boulder 18 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora18.jpg",
+          "alt": "Boulder 18 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Ex Machine", "grade": "7b", "info": "sit start", "video": "https://www.youtube.com/watch?v=J8tSoYaUJwo" }
-      ]
+        {
+          "number": 1,
+          "name": "Ex Machine",
+          "grade": "7b",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=J8tSoYaUJwo"
+        }
+      ],
+      "gps": {
+        "lat": 45.89164,
+        "lng": 13.94203
+      }
     },
     {
       "name": "Boulder 19",
       "id": "boulder-19",
-      "topos": [{ "image": "podrta_gora19.jpg", "alt": "Boulder 19 topo" }],
+      "topos": [
+        {
+          "image": "podrta_gora19.jpg",
+          "alt": "Boulder 19 topo"
+        }
+      ],
       "problems": [
-        { "number": 1, "name": "Sunshine", "grade": "8a", "info": "sit start", "video": "https://www.youtube.com/watch?v=8QO4Kxe4EAg" }
-      ]
+        {
+          "number": 1,
+          "name": "Sunshine",
+          "grade": "8a",
+          "info": "sit start",
+          "video": "https://www.youtube.com/watch?v=8QO4Kxe4EAg"
+        }
+      ],
+      "gps": {
+        "lat": 45.89194,
+        "lng": 13.94282
+      }
     }
   ]
 }

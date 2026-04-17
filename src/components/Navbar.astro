@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 
 const areas = await getCollection('areas');
-const sortedAreas = areas.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const sortedAreas = areas.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
 const currentPath = Astro.url.pathname;
 ---
 
