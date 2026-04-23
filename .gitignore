@@ -3,4 +3,4 @@ dist/
 .astro/
 .DS_Store
 dump.rdb
-public/images/raw/
+# public/images/raw/
