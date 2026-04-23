@@ -6,7 +6,7 @@
     "lat": 45.93408529992609,
     "lng": 13.884733930896514
   },
-  "problem_count": 21,
+  "problem_count": 24,
   "boulder_count": 6,
   "grade_range": "4 - 8a",
   "thumbnail": "orlovca2.jpg",
@@ -139,7 +139,7 @@
           "number": 5,
           "name": "Wind Story",
           "grade": "8a",
-          "info": "sit start; FA Bostjan Weingerl",
+          "info": "sit start; FA Bostjan Weingerl; alt. left ending (8a)",
           "video": ""
         },
         {
@@ -175,6 +175,20 @@
           "grade": "7a",
           "info": "sit start",
           "video": "https://vimeo.com/8040576#t=1m25s"
+        },
+                {
+          "number": 3,
+          "name": "Leti Vili",
+          "grade": "8a",
+          "info": "sit start",
+          "video": "https://www.instagram.com/p/DSSrQTJDDn3/"
+        },
+        {
+          "number": 4,
+          "name": "Marco Polo",
+          "grade": "?",
+          "info": "sit start",
+          "video": ""
         }
       ]
     },
@@ -253,7 +267,7 @@
           "number": 2,
           "name": "Lost Turtles",
           "grade": "??",
-          "info": "sit start",
+          "info": "sit start; end in 1",
           "video": ""
         },
         {
@@ -261,6 +275,13 @@
           "name": "Sabbra Cadabra",
           "grade": "??",
           "info": "sit start",
+          "video": ""
+        },
+        {
+          "number": 3,
+          "name": "Spiral Architect",
+          "grade": "??",
+          "info": "sit start in 1",
           "video": ""
         }
       ]
