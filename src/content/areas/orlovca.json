@@ -9,7 +9,7 @@
   "problem_count": 21,
   "boulder_count": 6,
   "grade_range": "4 - 8a",
-  "thumbnail": "orlovca2a.jpg",
+  "thumbnail": "orlovca2.jpg",
   "order": 1,
   "boulders": [
     {
@@ -102,19 +102,15 @@
       "gps": { "lat": 45.93440, "lng": 13.88509 },
       "topos": [
         {
-          "image": "orlovca2a.jpg",
-          "alt": "Boulder 2 front"
-        },
-        {
-          "image": "orlovca2b.jpg",
-          "alt": "Boulder 2 side"
+          "image": "orlovca2.jpg",
+          "alt": "Boulder 2 topo"
         }
       ],
       "problems": [
         {
           "number": 1,
           "name": "Loaded Nonsense",
-          "grade": "6c",
+          "grade": "6c+",
           "info": "sit start",
           "video": ""
         },
@@ -136,7 +132,7 @@
           "number": 4,
           "name": "??",
           "grade": "6c",
-          "info": "sit start",
+          "info": "sit start; original starting hold broke",
           "video": ""
         },
         {
