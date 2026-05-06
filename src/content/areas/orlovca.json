@@ -1,12 +1,12 @@
 {
   "title": "Orlovca",
-  "description": "5 boulders with 18 problems at Orlovca",
+  "description": "6 boulders with 26 problems at Orlovca",
   "map_image": "orlovca_map.jpg",
   "gps": {
     "lat": 45.93408529992609,
     "lng": 13.884733930896514
   },
-  "problem_count": 24,
+  "problem_count": 26,
   "boulder_count": 6,
   "grade_range": "4 - 8a",
   "thumbnail": "orlovca2.jpg",
@@ -176,7 +176,7 @@
           "info": "sit start",
           "video": "https://vimeo.com/8040576#t=1m25s"
         },
-                {
+        {
           "number": 3,
           "name": "Leti Vili",
           "grade": "8a",
@@ -278,7 +278,7 @@
           "video": ""
         },
         {
-          "number": 3,
+          "number": 4,
           "name": "Spiral Architect",
           "grade": "??",
           "info": "sit start in 1",
